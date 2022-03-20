@@ -14,7 +14,7 @@ hajimari:
       annotations:
         cert-manager.io/cluster-issuer: letsencrypt-prod
       hosts:
-        - host: &host home.khuedoan.com
+        - host: &host home.zanelab.com
           paths:
             - path: /
               pathType: Prefix

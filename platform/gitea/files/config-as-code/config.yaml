@@ -8,13 +8,13 @@ organizations:
 repositories:
   - path: ops/homelab
     migrate:
-      source: https://github.com/khuedoan/homelab
+      source: https://github.com/zanelab/homelab
       mirror: false
     webhooks:
       - http://gitea-webhook.tekton-pipelines:3000
-  - path: khuedoan/blog
+  - path: zanelab/blog
     webhooks:
       - http://gitea-webhook.tekton-pipelines:3000
-  - path: khuedoan/backstage
+  - path: zanelab/backstage
     webhooks:
       - http://gitea-webhook.tekton-pipelines:3000

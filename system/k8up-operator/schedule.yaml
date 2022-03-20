@@ -6,7 +6,7 @@ spec:
   backend:
     s3:
       endpoint: s3.us-west-002.backblazeb2.com
-      bucket: khuedoan-homelab-backup
+      bucket: zanelab-homelab-backup
       accessKeyIDSecretRef:
         name: backblaze-credentials
         key: application-key-id

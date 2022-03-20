@@ -1,6 +1,6 @@
 #!/bin/sh
 
-curl -fks --connect-timeout 5 https://git.khuedoan.com \
+curl -fks --connect-timeout 5 https://git.zanelab.com \
     || extra_args="--values values-seed.yaml"
 
 helm template \
