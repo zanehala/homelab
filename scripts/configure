@@ -13,9 +13,9 @@ import sys
 
 from rich.prompt import Confirm, Prompt
 
-default_seed_repo = "https://github.com/zanelab/homelab"
+default_seed_repo = "https://github.com/zanehala/homelab"
 default_domain = "zanelab.com"
-default_timezone = "Asia/Ho_Chi_Minh"
+default_timezone = "America/Chicago"
 default_terraform_workspace = "zanelab"
 
 

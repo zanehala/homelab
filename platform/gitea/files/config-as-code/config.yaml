@@ -8,7 +8,7 @@ organizations:
 repositories:
   - path: ops/homelab
     migrate:
-      source: https://github.com/zanelab/homelab
+      source: https://github.com/zanehala/homelab
       mirror: false
     webhooks:
       - http://gitea-webhook.tekton-pipelines:3000

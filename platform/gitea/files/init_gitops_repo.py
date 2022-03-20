@@ -12,7 +12,7 @@ import requests
 gitea_host = os.getenv('GITEA_HOST', "gitea-http:3000")
 gitea_user = os.environ['GITEA_USER']
 gitea_pass = os.environ['GITEA_PASSWORD']
-seed_repo = "https://github.com/zanelab/homelab"
+seed_repo = "https://github.com/zanehala/homelab"
 org = "ops"
 repo = "homelab"
 gitea_url = f"http://{gitea_user}:{gitea_pass}@{gitea_host}"
