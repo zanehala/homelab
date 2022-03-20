@@ -6,4 +6,4 @@ cert-manager:
       enabled: true
 
 issuer:
-  email: mail@zanelab.com
+  email: zmhala@gmail.com
