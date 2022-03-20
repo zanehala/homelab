@@ -12,9 +12,9 @@ repositories:
       mirror: false
     webhooks:
       - http://gitea-webhook.tekton-pipelines:3000
-  - path: zanelab/blog
-    webhooks:
-      - http://gitea-webhook.tekton-pipelines:3000
-  - path: zanelab/backstage
-    webhooks:
-      - http://gitea-webhook.tekton-pipelines:3000
+  # - path: zanelab/blog
+  #   webhooks:
+  #     - http://gitea-webhook.tekton-pipelines:3000
+  # - path: zanelab/backstage
+  #   webhooks:
+  #     - http://gitea-webhook.tekton-pipelines:3000
