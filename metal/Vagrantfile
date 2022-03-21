@@ -4,7 +4,7 @@ inventory = YAML.load_file(File.join(__dir__, './inventories/dev.yml'))
 group_vars = YAML.load_file(File.join(__dir__, './group_vars/all.yml'))
 
 # ANCHOR: vm_specs
-cpus = 2
+cpus = 4
 memory = "8192"
 disk_size = "128GB"
 # ANCHOR_END: vm_specs
