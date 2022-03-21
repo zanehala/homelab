@@ -1,7 +1,7 @@
-apiVersion: v2
-name: kured
-version: 0.0.0
-dependencies:
-- name: kured
-  version: 2.11.2
-  repository: https://weaveworks.github.io/kured
+# apiVersion: v2
+# name: kured
+# version: 0.0.0
+# dependencies:
+# - name: kured
+#   version: 2.11.2
+#   repository: https://weaveworks.github.io/kured
