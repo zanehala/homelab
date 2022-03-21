@@ -5,7 +5,7 @@ group_vars = YAML.load_file(File.join(__dir__, './group_vars/all.yml'))
 
 # ANCHOR: vm_specs
 cpus = 4
-memory = "8192"
+memory = "16384"
 disk_size = "128GB"
 # ANCHOR_END: vm_specs
 
