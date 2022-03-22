@@ -2,7 +2,7 @@ metal:
   children:
     masters:
       hosts:
-        metal0: {ansible_host: 10.0.1.20, mac: '14:b3:1f:26:b5:b8', disk: sda, network_interface: eno1} # Optiplex 7050 66P08M2
+        metal0: {ansible_host: 10.0.1.20, mac: '14:b3:1f:26:b5:b8', disk: sda, network_interface: eth0} # Optiplex 7050 66P08M2
         # metal1: {ansible_host: 10.0.1.21, mac: '18:03:73:33:82:6c', disk: sda, network_interface: eno1} # Optiplex 790 2XTY7V1
         # metal2: {ansible_host: 10.0.1.22, mac: '02:2f:0d:ba:79:67', disk: sda, network_interface: eno1} # Thinman VM
     workers:
