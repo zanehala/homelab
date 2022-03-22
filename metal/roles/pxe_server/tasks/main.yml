@@ -16,6 +16,15 @@
     dest: "{{ role_path }}/files/data/pxe-config/dhcpd.conf"
     mode: 0644
 
+- name: Get dhcp path
+  debug: 
+  vars: 
+    path: "{{ role_path }}/files/data/pxe-config/dhcpd.conf"
+
+- name: debug dhcp config
+  debug:
+    msg: "{{ lookup('file', path) }}"
+
 - name: Generate GRUB config
   template:
     src: grub.cfg.j2
