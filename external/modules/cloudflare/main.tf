@@ -26,7 +26,7 @@ resource "random_password" "tunnel_secret" {
 
 resource "cloudflare_argo_tunnel" "homelab" {
   account_id = var.cloudflare_account_id
-  name       = "homelab"
+  name       = "homelab-prod"
   secret     = base64encode(random_password.tunnel_secret.result)
 }
 
@@ -34,7 +34,7 @@ resource "cloudflare_argo_tunnel" "homelab" {
 resource "cloudflare_record" "tunnel" {
   zone_id = data.cloudflare_zone.zone.id
   type    = "CNAME"
-  name    = "homelab-tunnel"
+  name    = "homelab-prod-tunnel"
   value   = "${cloudflare_argo_tunnel.homelab.id}.cfargotunnel.com"
   proxied = false
   ttl     = 1 # Auto
