@@ -1,9 +1,6 @@
 set timeout=-1
 
 menuentry '{{ iso_url | basename | splitext | first }} (PXE)' {
-    echo "test"
-    echo ${net_default_mac}
-    sleep 10
     linux vmlinuz \
         ip=dhcp \
         inst.ks=http://{{ ansible_default_ipv4.address }}/init-config/${net_default_mac}.ks
