@@ -23,3 +23,7 @@ kube-prometheus-stack:
       serviceMonitorSelectorNilUsesHelmValues: false
       podMonitorSelectorNilUsesHelmValues: false
       probeSelectorNilUsesHelmValues: false
+  
+  additionalPrometheusRulesMap {
+    
+  }
