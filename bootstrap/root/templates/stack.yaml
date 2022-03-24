@@ -23,8 +23,9 @@ spec:
       source:
         repoURL: {{ $.Values.gitops.repo }}
         path: '{{ `{{path}}` }}'
-        plugin:
-          name: argocd-vault-plugin-helm
+        # Disabled for now
+        # plugin:
+        #   name: argocd-vault-plugin-helm
         targetRevision: {{ $.Values.gitops.revision }}
       syncPolicy:
         automated:
