@@ -74,6 +74,7 @@ argo-cd:
   dex:
     metrics: *metrics
 
+  # Doesn't work atm but not enabled. See root/template/stack.yaml
   repoServer:
     serviceAccount:
       create: true
