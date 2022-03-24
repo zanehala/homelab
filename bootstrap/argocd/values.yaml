@@ -17,6 +17,15 @@ argo-cd:
           end
         end
         return hs
+      
+      data:
+        configManagementPlugins: |-
+          - name: argocd-vault-plugin
+            generate:
+              command: ["argocd-vault-plugin"]
+              args: ["generate", "./"]
+
+
       # TODO https://github.com/argoproj/argo-helm/pull/1070
       # resource.customizations.health.argoproj.io_ApplicationSet: |
       #   hs = {}
