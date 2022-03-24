@@ -16,7 +16,7 @@ spec:
         # https://argocd-vault-plugin.readthedocs.io/en/stable/config/
         envFrom:
           - secretRef:
-              name: argocd-vault-plugin-credentials
+              name: vault-configuration
       volumes:
       - name: custom-tools
         emptyDir: {}
