@@ -24,6 +24,41 @@ argo-cd:
             command: ["argocd-vault-plugin"]
             args: ["generate", "./"]
 
+repoServer:
+  serviceAccount:
+    create: true
+    automountServiceAccountToken: true
+    name: argocd-repo-server
+
+  volumeMounts:
+  - name: custom-tools
+    mountPath: /usr/local/bin/argocd-vault-plugin
+    subPath: argocd-vault-plugin
+  
+  volumes:
+  - name: custom-tools
+    emptyDir: {}
+  
+  initContainers:
+  - name: download-tools
+    image: alpine:3.8
+    command: [sh, -c]
+
+    # Don't forget to update this to whatever the stable release version is
+    # Note the lack of the `v` prefix unlike the git tag
+    env:
+      - name: AVP_VERSION
+        value: "1.10.0"
+    args:
+      - >-
+        wget -O argocd-vault-plugin
+        https://github.com/argoproj-labs/argocd-vault-plugin/releases/download/v${AVP_VERSION}/argocd-vault-plugin_${AVP_VERSION}_linux_amd64 &&
+        chmod +x argocd-vault-plugin &&
+        mv argocd-vault-plugin /custom-tools/
+    volumeMounts:
+      - mountPath: /custom-tools
+        name: custom-tools
+      
 
       # TODO https://github.com/argoproj/argo-helm/pull/1070
       # resource.customizations.health.argoproj.io_ApplicationSet: |
