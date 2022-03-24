@@ -18,12 +18,11 @@ argo-cd:
         end
         return hs
       
-      data:
-        configManagementPlugins: |-
-          - name: argocd-vault-plugin
-            generate:
-              command: ["argocd-vault-plugin"]
-              args: ["generate", "./"]
+      configManagementPlugins: |-
+        - name: argocd-vault-plugin
+          generate:
+            command: ["argocd-vault-plugin"]
+            args: ["generate", "./"]
 
 
       # TODO https://github.com/argoproj/argo-helm/pull/1070
