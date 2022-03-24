@@ -24,8 +24,6 @@ spec:
         repoURL: {{ $.Values.gitops.repo }}
         path: '{{ `{{path}}` }}'
         targetRevision: {{ $.Values.gitops.revision }}
-        plugin:
-          name: argocd-vault-plugin
       syncPolicy:
         automated:
           prune: true
