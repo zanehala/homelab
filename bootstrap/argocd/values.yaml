@@ -18,11 +18,15 @@ argo-cd:
         end
         return hs
       
-      configManagementPlugins: |-
-        - name: argocd-vault-plugin
+      configManagementPlugins: |
+        - name: argocd-vault-plugin-helm
+          init:
+            command: [sh, -c]
+            args: ["helm dependency build"]
           generate:
-            command: ["argocd-vault-plugin"]
-            args: ["generate", "./"]
+            command: ["sh", "-c"]
+            args: ["helm template $ARGOCD_APP_NAME . --install-crds | argocd-vault-plugin generate -"]
+
 
       # TODO https://github.com/argoproj/argo-helm/pull/1070
       # resource.customizations.health.argoproj.io_ApplicationSet: |
