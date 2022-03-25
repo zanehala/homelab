@@ -2,3 +2,4 @@ loki-stack:
   loki:
     serviceMonitor:
       enabled: true
+  replicas: 2
