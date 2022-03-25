@@ -2,4 +2,5 @@ kured:
   configuration:
     annotateNodes: true
     rebootSentinelCommand: sh -c "! needs-restarting --reboothint"
+    drainGracePeriod: 300
     timeZone: America/Chicago
