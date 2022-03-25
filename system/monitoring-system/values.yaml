@@ -18,17 +18,6 @@ kube-prometheus-stack:
         url: http://loki.loki:3100
 
   prometheus:
-    ingress:
-      enabled: true
-      ingressClassName: nginx
-      annotations:
-        cert-manager.io/cluster-issuer: letsencrypt-prod
-      hosts:
-        - &promHost prometheus.zanelab.com
-      tls:
-        - secretName: prometheus-tls-certificate
-          hosts:
-            - *promHost
     prometheusSpec:
       ruleSelectorNilUsesHelmValues: false
       serviceMonitorSelectorNilUsesHelmValues: false
