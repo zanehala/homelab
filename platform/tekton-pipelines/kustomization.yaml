@@ -13,6 +13,12 @@ resources:
   - ingress.yaml
   - cluster-role-binding.yaml
   - service-account.yaml
+  - create-webhook.yaml
+  - pipeline.yaml
+  - rbac.yaml
+  - triggers.yaml
+  - webhook-role.yaml
+  - webhook-run.yaml
   # Tasks
   - https://raw.githubusercontent.com/tektoncd/catalog/main/task/git-clone/0.5/git-clone.yaml
   - https://raw.githubusercontent.com/tektoncd/catalog/main/task/kaniko/0.5/kaniko.yaml
