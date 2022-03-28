@@ -1,0 +1,28 @@
+apiVersion: tekton.dev/v1beta1
+kind: TaskRun
+metadata:
+  name: create-webhook-run
+  namespace: tekton-pipelines
+spec:
+  taskRef:
+    name: create-webhook
+  params:
+  - name: GitHubOrg
+    value: "zanehala"
+  - name: GitHubUser
+    value: "zanehala"
+  - name: GitHubRepo
+    value: "testrepo"
+  - name: GitHubSecretName
+    value: webhook-secret
+  - name: GitHubAccessTokenKey
+    value: token
+  - name: GitHubSecretStringKey
+    value: secret
+  - name: ExternalDomain
+    value: listener.zanelab.com
+#   If you are using github enterprise, provide a value for GitHubDomain
+#  - name: GitHubDomain
+#    value: git.corp.com
+  timeout: 1000s
+  serviceAccountName: tekton-triggers-createwebhook
