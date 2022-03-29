@@ -36,7 +36,7 @@ spec:
               type: image
               params:
                 - name: url
-                  value: registry.zanelab.com/testrepo:1 # docker-repo-location.com/repo:getting-started
+                  value: registry.zanelab.com/testrepo:$(tt.params.gitrevision) # docker-repo-location.com/repo:getting-started
 ---
 apiVersion: triggers.tekton.dev/v1alpha1
 kind: TriggerBinding

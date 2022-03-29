@@ -55,3 +55,5 @@ spec:
         - --dockerfile=$(params.pathToDockerFile)
         - --destination=$(resources.outputs.builtImage.url)
         - --context=$(params.pathToContext)
+        # - --build-arg opts='GOARCH=arm64' 
+        # - --customPlatform=linux/arm64/v8
