@@ -25,6 +25,32 @@ spec:
             resource: image-source
 ---
 apiVersion: tekton.dev/v1beta1
+kind: TaskRun
+metadata:
+  labels:
+    tekton.dev/task: github-set-status
+  name: github-set-status-run-on-commit-bd93
+spec:
+  taskRef:
+    kind: Task
+    name: github-set-status
+  params:
+    - name: REPO_FULL_NAME
+      value: zanehala/testrepo
+     - name: SHA
+      value: $(params.source-repo.revision)
+    - name: DESCRIPTION
+      value: "Build has started"
+    - name: STATE
+      value: pending
+    - name: TARGET_URL
+      value: https://tekton.zanelab.com
+    - name: GITHUB_TOKEN_SECRET_NAME
+      value: webhook-secret
+    - name: GITHUB_TOKEN_SECRET_KEY
+      value: token
+---
+apiVersion: tekton.dev/v1beta1
 kind: Task
 metadata:
   name: build-docker-image
