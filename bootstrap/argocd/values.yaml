@@ -26,6 +26,15 @@ argo-cd:
           generate:
             command: ["sh", "-c"]
             args: ["helm template $ARGOCD_APP_NAME . --install-crds | argocd-vault-plugin generate -"]
+      
+      resource.exclusions: |
+        - apiGroups:
+          - "*"
+          kinds:
+          - "PipelineRun"
+          - "TaskRun"
+          clusters:
+          - "*"
 
 
       # TODO https://github.com/argoproj/argo-helm/pull/1070
