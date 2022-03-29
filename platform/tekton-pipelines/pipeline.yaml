@@ -37,7 +37,7 @@ spec:
   params:
     - name: REPO_FULL_NAME
       value: zanehala/testrepo
-     - name: SHA
+    - name: SHA
       value: $(params.source-repo.revision)
     - name: DESCRIPTION
       value: "Build has started"
