@@ -39,7 +39,7 @@ spec:
         outputs:
           - name: builtImage
             resource: image-source
-    - name: set-github-status
+    - name: set-github-status-pending
       taskRef:
         name: github-set-status
       params:
@@ -57,6 +57,28 @@ spec:
           value: $(params.description)
         - name: STATE
           value: $(params.state)
+    - name: set-github-status-success
+      when:
+        - input: "$(tasks.build-docker-image.results.exists)"
+          operator: in
+          values: ["yes"]
+      taskRef:
+        name: github-set-status
+      params:
+        - name: REPO_FULL_NAME
+          value: $(params.repo-full-name)
+        - name: SHA
+          value: $(params.git-sha)
+        - name: GITHUB_TOKEN_SECRET_NAME
+          value: $(params.token-secret-name)
+        - name: GITHUB_TOKEN_SECRET_KEY
+          value: $(params.token-secret-key)
+        - name: TARGET_URL
+          value: $(params.target-url)
+        - name: DESCRIPTION
+          value: $(params.description)
+        - name: STATE
+          value: success
 ---
 apiVersion: tekton.dev/v1beta1
 kind: Task
