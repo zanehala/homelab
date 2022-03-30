@@ -49,7 +49,7 @@ spec:
           - name: token-secret-key
             value: token
           - name: target-url
-            value: tekton.zanelab.com
+            value: https://tekton.zanelab.com
           - name: description
             value: test-status
           - name: state
