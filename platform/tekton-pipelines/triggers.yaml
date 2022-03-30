@@ -12,6 +12,8 @@ spec:
       description: The git repository url
     - name: namespace
       description: The namespace to create the resources
+    - name: gitrepositoryfullname
+      description: repo full name
   resourcetemplates:
     - apiVersion: tekton.dev/v1beta1
       kind: PipelineRun
@@ -37,6 +39,21 @@ spec:
               params:
                 - name: url
                   value: registry.zanelab.com/testrepo:$(tt.params.gitrevision) # docker-repo-location.com/repo:getting-started
+        params:
+          - name: git-sha
+            value: $(tt.params.gitrevision)
+          - name: repo-full-name
+            value: $(tt.params.gitrepositoryfullname)
+          - name: token-secret-name
+            value: webhook-secret
+          - name: token-secret-key
+            value: token
+          - name: target-url
+            value: tekton.zanelab.com
+          - name: description
+            value: test-status
+          - name: state
+            value: pending
 ---
 apiVersion: triggers.tekton.dev/v1alpha1
 kind: TriggerBinding
@@ -51,6 +68,8 @@ spec:
       value: tekton-pipelines
     - name: gitrepositoryurl
       value: "https://github.com/$(body.repository.full_name)"
+    - name: gitrepositoryfullname
+      value: $(body.repository.full_name)
 ---
 apiVersion: triggers.tekton.dev/v1alpha1
 kind: EventListener
