@@ -16,6 +16,13 @@ kube-prometheus-stack:
       - name: Loki
         type: loki
         url: http://loki.loki:3100
+    persistence:
+      type: pvc
+      enabled: true
+      storageClassName: longhorn
+      accessModes:
+        - ReadWriteOnce
+      size: 5Gi
 
   prometheus:
     prometheusSpec:
