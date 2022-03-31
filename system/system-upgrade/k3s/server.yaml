@@ -16,6 +16,9 @@ spec:
   drain:
     force: true
     skipWaitForDeleteTimeout: 300  # Honor PodDisruptionBudgets
+  tolerations:
+    - {key: node.kubernetes.io/unreachable, effect: NoSchedule}
+    - {key: node.kubernetes.io/unreachable, effect: NoExecute}
   upgrade:
     image: rancher/k3s-upgrade
   channel: https://update.k3s.io/v1-release/channels/v1.23
