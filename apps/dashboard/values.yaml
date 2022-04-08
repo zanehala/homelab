@@ -6,8 +6,14 @@ kubernetes-dashboard:
       cert-manager.io/cluster-issuer: letsencrypt-prod
     hosts:
       - dashboard.zanelab.com
-    paths:
-      - /
+    customPaths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: release-name-kubernetes-dashboard
+            port:
+              number: 443
     tls:
       - secretName: kubernetes-dashboard-tls-certificate
         hosts:
