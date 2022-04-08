@@ -1,7 +1,7 @@
 kubernetes-dashboard:
   ingress:
     enabled: true
-    ingressClassName: nginx
+    className: nginx
     annotations:
       cert-manager.io/cluster-issuer: letsencrypt-prod
     hosts:
