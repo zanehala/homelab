@@ -5,7 +5,7 @@ metadata:
 spec:
   backend:
     s3:
-      endpoint: s3.us-west-002.backblazeb2.com
+      endpoint: s3.us-west-004.backblazeb2.com
       bucket: zanelab-homelab-backup
       accessKeyIDSecretRef:
         name: backblaze-credentials
