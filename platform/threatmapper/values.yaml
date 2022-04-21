@@ -1,0 +1,5 @@
+deepfence-console:
+  volume:
+    storageClass: longhorn
+    esStorage: 5Gi
+    postgresStorage: 5Gi
