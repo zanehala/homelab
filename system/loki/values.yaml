@@ -3,3 +3,7 @@ loki-stack:
     serviceMonitor:
       enabled: true
   replicas: 2
+  
+  promtail:
+    serviceMonitor:
+      enabled: true
