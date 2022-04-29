@@ -2,10 +2,10 @@ metal:
   children:
     masters:
       hosts:
-        metal0: {ansible_host: 10.0.1.20, mac: '14:b3:1f:26:b5:b8', disk: sda, network_interface: enp0s31f6} # Optiplex 7050 66P08M2
+        metal0: {ansible_host: 10.0.1.20, vip: 10.0.1.19, mac: '14:b3:1f:26:b5:b8', disk: sda, network_interface: enp0s31f6} # Optiplex 7050 66P08M2
         # metal1: {ansible_host: 10.0.1.21, mac: '18:03:73:33:82:6c', disk: sda, network_interface: eno1} # Optiplex 790 2XTY7V1
-        metal2: {ansible_host: 10.0.1.22, mac: '14:b3:1f:16:27:f3', disk: sda, network_interface: enp0s31f6} # Optiplex 7050 77DYHK2
-        metal3: {ansible_host: 10.0.1.23, mac: '14:b3:1f:14:92:57', disk: sda, network_interface: enp0s31f6} # Optiplex 7050 77DWHK2
+        metal2: {ansible_host: 10.0.1.22, vip: 10.0.1.19, mac: '14:b3:1f:16:27:f3', disk: sda, network_interface: enp0s31f6} # Optiplex 7050 77DYHK2
+        metal3: {ansible_host: 10.0.1.23, vip: 10.0.1.19, mac: '14:b3:1f:14:92:57', disk: sda, network_interface: enp0s31f6} # Optiplex 7050 77DWHK2
     workers:
       hosts:
         # metal3: {ansible_host: 192.168.1.113, mac: '00:23:24:d1:f5:69', disk: sda, network_interface: eno1}

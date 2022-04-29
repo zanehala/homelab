@@ -6,4 +6,6 @@ server: https://{{ hostvars[groups['masters'][0]].ansible_host }}:6443
 token-file: {{ k3s_token_file }}
 {% if 'masters' in group_names %}
 {{ k3s_server_config | to_nice_yaml }}
+tls-san:
+  - "{{hostvars[groups['masters'][0]].vip}}"
 {% endif %}
