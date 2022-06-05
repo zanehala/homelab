@@ -14,3 +14,17 @@ home-assistant:
         - secretName: home-assistant-tls-certificate
           hosts:
             - *host
+  service:
+    main:
+      ports:
+        http:
+          port: 8123
+          use_x_forwarded_for: true
+            trusted_proxies:
+            # Pod CIDR
+            - 10.42.0.0/24
+            - 10.42.1.0/24
+            - 10.42.2.0/24
+            - 10.42.3.0/24
+            # Node CIDR
+            - 10.0.1.0/24
