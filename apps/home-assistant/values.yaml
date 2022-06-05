@@ -11,6 +11,6 @@ home-assistant:
             - path: /
               pathType: Prefix
       tls:
-        - secretName: ha-tls-certificate
+        - secretName: home-assistant-tls-certificate
           hosts:
             - *host
