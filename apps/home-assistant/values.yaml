@@ -32,9 +32,8 @@ home-assistant:
   configmap:
     config:
       enabled: true
-      data: 
+      data: |
         http:
-          port: 8123
           use_x_forwarded_for: true
           trusted_proxies:
           # Pod CIDR
