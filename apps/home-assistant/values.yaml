@@ -29,6 +29,7 @@ http:
   # Node CIDR
   - 10.0.1.0/24
 
+common:
   configmap:
     config:
     enabled: true
