@@ -33,13 +33,14 @@ home-assistant:
     config:
       enabled: true
       data:
-        http: |
-          use_x_forwarded_for: true
-          trusted_proxies:
-          # Pod CIDR
-          - 10.42.0.0/24
-          - 10.42.1.0/24
-          - 10.42.2.0/24
-          - 10.42.3.0/24
-          # Node CIDR
-          - 10.0.1.0/24
+        config: |
+          http:
+            use_x_forwarded_for: true
+            trusted_proxies:
+            # Pod CIDR
+            - 10.42.0.0/24
+            - 10.42.1.0/24
+            - 10.42.2.0/24
+            - 10.42.3.0/24
+            # Node CIDR
+            - 10.0.1.0/24
