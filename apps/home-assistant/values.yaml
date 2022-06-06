@@ -33,7 +33,7 @@ home-assistant:
     config:
       enabled: true
       data:
-        config: |
+        configmap: |
           http:
             use_x_forwarded_for: true
             trusted_proxies:
