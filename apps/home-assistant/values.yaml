@@ -32,8 +32,8 @@ home-assistant:
   configmap:
     config:
       enabled: true
-      data: |
-        http:
+      data:
+        http: |
           use_x_forwarded_for: true
           trusted_proxies:
           # Pod CIDR
