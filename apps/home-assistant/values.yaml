@@ -18,7 +18,7 @@ home-assistant:
     config:
       enabled: true
       type: configMap
-      mountPath: /config
+      mountPath: /test
       name: home-assistant-config
       readOnly: false
 
