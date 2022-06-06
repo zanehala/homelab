@@ -18,15 +18,16 @@ home-assistant:
     config:
       enabled: true
       type: configMap
-      mountPath: /test
+      mountPath: /config
       name: home-assistant-config
       readOnly: false
+      defaultMode: 0777
 
   configmap:
     config:
       enabled: true
       data:
-        config: |
+        configuration.yaml: |
           # Loads default set of integrations. Do not remove.
           default_config:
 
