@@ -18,7 +18,7 @@ home-assistant:
     config:
       enabled: true
       type: configMap
-      mountPath: /config/configuration.yaml
+      mountPath: /config
       name: home-assistant-config
       readOnly: false
 
