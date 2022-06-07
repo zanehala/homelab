@@ -17,11 +17,13 @@ home-assistant:
   persistence:
     config:
       enabled: true
-      type: configMap
-      mountPath: /config
-      name: home-assistant-config
-      readOnly: false
-      defaultMode: 0777
+      type: custom
+      volumeSpec:
+        configMap:
+          name: home-assistant-config
+      subPath:
+        - path: configuration.yaml
+          mountPath: /config/configuration.yaml
 
   configmap:
     config:
