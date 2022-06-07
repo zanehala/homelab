@@ -15,7 +15,7 @@ home-assistant:
           hosts:
             - *host
   persistence:
-    configMap:
+    configmap:
       enabled: true
       type: custom
       volumeSpec:
