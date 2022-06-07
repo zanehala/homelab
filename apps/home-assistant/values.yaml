@@ -50,3 +50,13 @@ home-assistant:
             - 10.42.3.0/24
             # Node CIDR
             - 10.0.1.0/24
+
+  influxdb:
+    enabled: true
+    architecture: standalone
+    database: home_assistant
+    authEnabled: false
+    persistence:
+      enabled: true
+      storageClass: longhorn
+      size: 8Gi
