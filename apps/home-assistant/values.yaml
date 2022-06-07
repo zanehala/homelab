@@ -21,7 +21,7 @@ home-assistant:
       mountPath: /config
       name: home-assistant-config
       readOnly: false
-      defaultMode: 777
+      defaultMode: 0777
 
   configmap:
     config:
