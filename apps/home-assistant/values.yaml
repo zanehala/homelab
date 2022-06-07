@@ -68,3 +68,6 @@ home-assistant:
       enabled: true
       storageClass: longhorn
       size: 8Gi
+
+  controller:
+    replicas: 2
