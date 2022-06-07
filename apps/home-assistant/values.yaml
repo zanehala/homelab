@@ -37,9 +37,9 @@ home-assistant:
           tts:
             - platform: google_translate
 
-          automation: !include automations.yaml
-          script: !include scripts.yaml
-          scene: !include scenes.yaml
+          # automation: !include automations.yaml
+          # script: !include scripts.yaml
+          # scene: !include scenes.yaml
           http:
             port: 8123
             use_x_forwarded_for: true
