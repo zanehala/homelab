@@ -15,7 +15,7 @@ home-assistant:
           hosts:
             - *host
   persistence:
-    config:
+    configMap:
       enabled: true
       type: custom
       volumeSpec:
@@ -24,7 +24,7 @@ home-assistant:
       subPath:
         - path: configuration.yaml
           mountPath: /config/configuration.yaml
-    config:
+    pvc:
       enabled: true
       type: pvc
       accessMode: ReadWriteOnce
