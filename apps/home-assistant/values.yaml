@@ -27,7 +27,7 @@ home-assistant:
     config:
       enabled: true
       type: pvc
-      accessMode: ReadWriteMany
+      accessMode: ReadWriteOnce
       size: 8Gi
       mountPath: /config/.storage/
       readOnly: false
