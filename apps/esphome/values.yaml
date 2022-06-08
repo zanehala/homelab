@@ -1,4 +1,7 @@
 esphome:
+  image:
+    tag: latest
+
   ingress:
     main:
       enabled: true
