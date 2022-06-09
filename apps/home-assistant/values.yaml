@@ -32,6 +32,14 @@ home-assistant:
       mountPath: /config/.storage/
       readOnly: false
       storageClass: longhorn
+    db:
+      enabled: true
+      type: pvc
+      accessMode: ReadWriteOnce
+      size: 8Gi
+      mountPath: /config/home-assistant_v2.db
+      readOnly: false
+      storageClass: longhorn
 
   configmap:
     config:
