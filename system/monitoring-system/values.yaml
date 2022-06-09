@@ -30,6 +30,13 @@ kube-prometheus-stack:
       serviceMonitorSelectorNilUsesHelmValues: false
       podMonitorSelectorNilUsesHelmValues: false
       probeSelectorNilUsesHelmValues: false
+      additionalScrapeConfigs:
+        - job_name: integrations/hass
+          metrics_path: /api/prometheus
+          bearer_token: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiI2NDU3N2RmZTc3OGU0MGU1ODVhZmJhNmZjYWUyOTVmOSIsImlhdCI6MTY1NDc0NDIyNSwiZXhwIjoxOTcwMTA0MjI1fQ.JKHBMkBKcICVyy4v33Xyvfk8A_ZouJ8w7681MAaXUic"
+          scheme: https
+          static_configs:
+            - targets: ['ha.zanelab.com:8123']
       storageSpec:
         volumeClaimTemplate:
           spec:
