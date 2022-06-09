@@ -58,6 +58,8 @@ home-assistant:
             - 10.42.3.0/24
             # Node CIDR
             - 10.0.1.0/24
+          prometheus:
+            namespace: hass
 
   influxdb:
     enabled: true
