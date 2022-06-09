@@ -35,7 +35,7 @@ home-assistant:
     db:
       enabled: true
       type: pvc
-      existingClaim: pvc
+      existingClaim: home-assistant-pvc
       subPath:
         - path: home-assistant_v2.db
           mountPath: /config/home-assistant_v2.db
