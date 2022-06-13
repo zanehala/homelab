@@ -19,3 +19,13 @@ esphome:
             - *host
   env:
     DISABLE_HA_AUTHENTICATION: true
+
+  persistence:
+    pvc:
+      enabled: true
+      type: pvc
+      accessMode: ReadWriteOnce
+      size: 1Gi
+      mountPath: /config
+      readOnly: false
+      storageClass: longhorn
