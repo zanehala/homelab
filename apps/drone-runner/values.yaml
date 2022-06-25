@@ -2,7 +2,6 @@ drone-runner-kube:
   extraSecretNamesForEnvFrom:
     - droneci-secrets
   env:
-    DRONE_SERVER_HOST: drone.zanelab.com
-    DRONE_SERVER_PROTO: https
     DRONE_NAMESPACE_DEFAULT: droneci
     DRONE_RPC_HOST: drone.zanelab.com
+    DRONE_RPC_PROTO: https
