@@ -1,0 +1,3 @@
+drone:
+  extraSecretNamesForEnvFrom:
+    - droneci-secrets
