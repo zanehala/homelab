@@ -5,3 +5,7 @@ drone-runner-kube:
     DRONE_NAMESPACE_DEFAULT: drone-runner
     DRONE_RPC_HOST: drone.zanelab.com
     DRONE_RPC_PROTO: https
+
+  rbac:
+    buildNamespaces:
+      - drone-runner
