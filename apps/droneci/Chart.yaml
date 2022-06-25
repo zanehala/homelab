@@ -4,4 +4,4 @@ version: 0.0.0
 dependencies:
   - name: drone
     version: 0.3.0
-    repository: https://charts.drone.io/charts/
+    repository: https://charts.drone.io/
