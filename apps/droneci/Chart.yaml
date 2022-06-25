@@ -5,6 +5,3 @@ dependencies:
   - name: drone
     version: 0.3.0
     repository: https://charts.drone.io/
-  - name: drone-runner-kube
-    version: 0.1.8
-    repository: https://charts.drone.io/
