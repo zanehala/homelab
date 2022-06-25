@@ -21,7 +21,7 @@ drone:
         hosts:
           - *host
 
-drone-kube-runner:
+drone-runner-kube:
   extraSecretNamesForEnvFrom:
     - droneci-secrets
   env:
