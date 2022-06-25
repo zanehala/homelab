@@ -20,3 +20,11 @@ drone:
       - secretName: drone-tls-certificate
         hosts:
           - *host
+
+  persistentVolume:
+    enabled: true
+    accessModes:
+      - ReadWriteOnce
+    mountPath: /data
+    size: 8Gi
+    storageClass: longhorn
