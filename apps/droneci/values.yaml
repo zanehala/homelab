@@ -5,7 +5,7 @@ drone:
   env:
     DRONE_SERVER_HOST: drone.zanelab.com
     DRONE_SERVER_PROTO: https
-    
+
   ingress:
     enabled: true
     ingressClassName: nginx
@@ -17,6 +17,6 @@ drone:
           - path: /
             pathType: Prefix
     tls:
-      - secret-name: drone-tls-certificate
+      - secret-name: droneci-tls-certificate
         hosts:
           - *host
