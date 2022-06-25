@@ -17,6 +17,6 @@ drone:
           - path: /
             pathType: Prefix
     tls:
-      - secret-name: droneci-tls-certificate
+      - secretName: drone-tls-certificate
         hosts:
           - *host
