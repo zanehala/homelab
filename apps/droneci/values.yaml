@@ -20,3 +20,11 @@ drone:
       - secretName: drone-tls-certificate
         hosts:
           - *host
+
+drone-kube-runner:
+  extraSecretNamesForEnvFrom:
+    - droneci-secrets
+  env:
+    DRONE_SERVER_HOST: drone.zanelab.com
+    DRONE_SERVER_PROTO: https
+    DRONE_NAMESPACE_DEFAULT: droneci
