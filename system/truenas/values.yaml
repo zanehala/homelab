@@ -23,7 +23,7 @@ democratic-csi:
       controller-expand-secret:
 
   driver:
-    # existingConfigSecret: truenas-config
+    existingConfigSecret: truenas-config
     config:
       driver: freenas-nfs
       instance_id:
