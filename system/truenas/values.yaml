@@ -40,8 +40,8 @@ democratic-csi:
         username: root
         password: ""
       zfs:
-        datasetParentName: k8s/nfs/vols
-        detachedSnapshotsDatasetParentName: k8s/nfs/snaps
+        datasetParentName: vdev1/k8s/nfs/vols
+        detachedSnapshotsDatasetParentName: vdev1/k8s/nfs/snaps
         datasetEnableQuotas: true
         datasetEnableReservation: false
         datasetPermissionsMode: "0777"
