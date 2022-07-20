@@ -2,7 +2,11 @@ loki-stack:
   loki:
     serviceMonitor:
       enabled: true
+    config:
+      limits_config:
+        max_entries_limit_per_query: 0
   replicas: 2
+
 
   promtail:
     serviceMonitor:
