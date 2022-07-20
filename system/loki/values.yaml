@@ -5,6 +5,12 @@ loki-stack:
     config:
       limits_config:
         max_entries_limit_per_query: 0
+    persistence:
+      enabled: true
+      accessModes:
+      - ReadWriteMany
+      size: 50Gi
+      storageClassName: freenas-nfs-csi
   replicas: 2
 
 
