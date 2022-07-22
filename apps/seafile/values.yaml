@@ -29,9 +29,8 @@ seafile:
     enabled: true
     primary:
       persistence:
-        seafiledb:
-          enabled: true
-          readOnly: false
-          storageClass: freenas-nfs-csi
-          size: 10Gi
+        enabled: true
+        readOnly: false
+        storageClass: freenas-nfs-csi
+        size: 10Gi
 
