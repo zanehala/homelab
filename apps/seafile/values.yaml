@@ -15,5 +15,22 @@ seafile:
         - secretName: seafile-tls-certificate
           hosts:
             - *host
+  persistence:
+    data:
+      enabled: true
+      mountPath: /shared
+      type: pvc
+      readOnly: false
+      storageClass: freenas-nfs-csi
+      size: 100Gi
+
   mariadb:
     enabled: true
+    primary:
+      persistence:
+        seafiledb:
+          enabled: true
+          readOnly: false
+          storageClass: freenas-nfs-csi
+          size: 10Gi
+
