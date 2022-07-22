@@ -22,6 +22,7 @@ seafile:
       type: pvc
       readOnly: false
       storageClass: freenas-nfs-csi
+      accessMode: ReadWriteOnce
       size: 100Gi
 
   mariadb:
