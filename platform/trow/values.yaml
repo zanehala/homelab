@@ -27,4 +27,4 @@ trow:
         hosts:
           - *host
   volumeClaim:
-    storageClassName: longhorn
+    storageClassName: freenas-nfs-csi
