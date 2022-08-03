@@ -30,6 +30,7 @@ kube-prometheus-stack:
       serviceMonitorSelectorNilUsesHelmValues: false
       podMonitorSelectorNilUsesHelmValues: false
       probeSelectorNilUsesHelmValues: false
+      enableRemoteWriteReceiver: true
       additionalScrapeConfigs:
         - job_name: "hass"
           metrics_path: /api/prometheus
