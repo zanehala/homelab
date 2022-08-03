@@ -1,32 +1,32 @@
-apiVersion: batch/v1
-kind: Job
-metadata:
-  name: init-gitops-repo
-  namespace: {{ .Release.Namespace }}
-  annotations:
-    argocd.argoproj.io/sync-wave: "1"
-spec:
-  backoffLimit: 3
-  template:
-    spec:
-      restartPolicy: Never
-      containers:
-        - name: script
-          image: python
-          env:
-            - name: GITEA_USER
-              valueFrom:
-                secretKeyRef:
-                  name: gitea-admin-secret
-                  key: username
-            - name: GITEA_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  name: gitea-admin-secret
-                  key: password
-          command:
-            - python
-            - -c
-          args:
-            - |
-{{ .Files.Get "files/init_gitops_repo.py" | indent 14 }}
+# apiVersion: batch/v1
+# kind: Job
+# metadata:
+#   name: init-gitops-repo
+#   namespace: {{ .Release.Namespace }}
+#   annotations:
+#     argocd.argoproj.io/sync-wave: "1"
+# spec:
+#   backoffLimit: 3
+#   template:
+#     spec:
+#       restartPolicy: Never
+#       containers:
+#         - name: script
+#           image: python
+#           env:
+#             - name: GITEA_USER
+#               valueFrom:
+#                 secretKeyRef:
+#                   name: gitea-admin-secret
+#                   key: username
+#             - name: GITEA_PASSWORD
+#               valueFrom:
+#                 secretKeyRef:
+#                   name: gitea-admin-secret
+#                   key: password
+#           command:
+#             - python
+#             - -c
+#           args:
+#             - |
+# {{ .Files.Get "files/init_gitops_repo.py" | indent 14 }}
