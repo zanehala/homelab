@@ -17,7 +17,7 @@ to a fully functioning cluster.
   - RAM: `16GB`
   - SSD: `128GB - 500GB`
 - TP-Link `TL-SG108` switch:
-  - Ports: `8`
+  - Ports: `8` 
   - Speed: `1000Mbps`
 
 ### Features
