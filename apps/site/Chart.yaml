@@ -1,0 +1,7 @@
+apiVersion: v2
+name: site
+version: 0.0.0
+dependencies:
+  - name: site
+    version: 0.1.0
+    repository: https://git.zanelab.com/zhala/site/src/branch/master/helm
