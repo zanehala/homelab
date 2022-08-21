@@ -43,17 +43,9 @@ kube-prometheus-stack:
       storageSpec:
         volumeClaimTemplate:
           spec:
-            storageClassName: longhorn
-            accessModes: 
-              - ReadWriteOnce
-            resources:
-              requests:
-                storage: 20Gi
-        volumeClaimTemplate:
-          spec:
             storageClassName: freenas-nfs-csi
             accessModes: 
-              - ReadWriteOnce
+              - ReadWriteMany
             resources:
               requests:
                 storage: 50Gi
