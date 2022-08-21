@@ -49,6 +49,14 @@ kube-prometheus-stack:
             resources:
               requests:
                 storage: 20Gi
+        volumeClaimTemplate:
+          spec:
+            storageClassName: freenas-nfs-csi
+            accessModes: 
+              - ReadWriteOnce
+            resources:
+              requests:
+                storage: 50Gi
     additionalPrometheusRulesMap:
       alert-test:
         groups:
