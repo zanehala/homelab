@@ -5,6 +5,7 @@ drone:
   env:
     DRONE_SERVER_HOST: drone.zanelab.com
     DRONE_SERVER_PROTO: https
+    DRONE_USER_CREATE: username:zhala,admin:true
 
   ingress:
     enabled: true
