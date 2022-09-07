@@ -36,7 +36,7 @@ kube-prometheus-stack:
           metrics_path: /api/prometheus
           scrape_interval: 60s
           authorization:
-            credentials: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiI2NDU3N2RmZTc3OGU0MGU1ODVhZmJhNmZjYWUyOTVmOSIsImlhdCI6MTY1NDc0NDIyNSwiZXhwIjoxOTcwMTA0MjI1fQ.JKHBMkBKcICVyy4v33Xyvfk8A_ZouJ8w7681MAaXUic"
+            credentials: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJjYzQ0NWMzMzhjNTY0NTA5YTZiOTQ0NGQ5ODJhYzhjZCIsImlhdCI6MTY2MjUxMjIwMCwiZXhwIjoxOTc3ODcyMjAwfQ.-3r22atsl1_FD_fyfbvEBwCFpWakouNMXGuVmRnJJk0"
           scheme: https
           static_configs:
             - targets: ['ha.zanelab.com']
