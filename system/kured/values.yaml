@@ -4,5 +4,5 @@ kured:
     rebootSentinelCommand: sh -c "! needs-restarting --reboothint"
     drainGracePeriod: 300
     forceReboot: true
-    drainTimeout: 600
+    drainTimeout: 600s
     timeZone: America/Chicago
