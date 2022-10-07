@@ -4,6 +4,7 @@ gitea:
     className: nginx
     annotations:
       cert-manager.io/cluster-issuer: letsencrypt-prod
+      nginx.ingress.kubernetes.io/proxy-body-size: 0m
     hosts:
       - host: &host git.zanelab.com
         paths:
