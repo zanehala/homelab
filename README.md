@@ -12,7 +12,7 @@ to a fully functioning cluster.
 
 ### Hardware
 
-- 4 × Dell Optiplex 7050 SFF:
+- 4 × Dell Optiplex 7050 MFF:
   - CPU: A mix of `Intel Core i5-6600T @ 2.70GHz, Intel Core i5-7600T @ 2.80GHz, and one Intel Core i5-7600 (non T model) @ 3.50GHz, `
   - RAM: `16GB`
   - SSD: `128GB - 500GB`
@@ -111,9 +111,9 @@ to a fully functioning cluster.
     <td>Base OS for Kubernetes nodes</td>
   </tr>
   <tr>
-    <td><img width="32" src="https://avatars.githubusercontent.com/u/47602533?s=200&v=4"></td>
-    <td><a href="https://tekton.dev">Tekton</a></td>
-    <td>Cloud native solution for building CI/CD systems</td>
+    <td><img width="32" src="https://raw.githubusercontent.com/drone/brand/master/logos/vector/drone-logo-vector-white.svg"></td>
+    <td><a href="https://www.drone.io/">Drone</a></td>
+    <td>CI and build system</td>
   </tr>
   <tr>
     <td><img width="32" src="https://trow.io/trow.png"></td>
