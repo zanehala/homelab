@@ -31,7 +31,7 @@ kube-prometheus-stack:
       podMonitorSelectorNilUsesHelmValues: false
       probeSelectorNilUsesHelmValues: false
       enableRemoteWriteReceiver: true
-      retention: 90d
+      retention: 365d
       additionalScrapeConfigs:
         - job_name: "hass"
           metrics_path: /api/prometheus
@@ -94,7 +94,7 @@ kube-prometheus-stack:
               - ReadWriteMany
             resources:
               requests:
-                storage: 50Gi
+                storage: 100Gi
     additionalPrometheusRulesMap:
       alert-test:
         groups:
