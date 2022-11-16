@@ -42,9 +42,10 @@ kube-prometheus-stack:
           static_configs:
             - targets: ['ha.zanelab.com']
         - job_name: "pfsense"
-          metrics_path: 192.168.1.1:9111/metrics
           scrape_interval: 60s
           scheme: http
+          static_configs:
+            - targets: ['192.168.1.1:9111']
         - job_name: kubernetes-service-endpoints
           kubernetes_sd_configs:
           - role: pod
