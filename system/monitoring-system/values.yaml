@@ -41,6 +41,10 @@ kube-prometheus-stack:
           scheme: https
           static_configs:
             - targets: ['ha.zanelab.com']
+        - job_name: "pfsense"
+          metrics_path: 192.168.1.1:9111/metrics
+          scrape_interval: 60s
+          scheme: http
         - job_name: kubernetes-service-endpoints
           kubernetes_sd_configs:
           - role: pod
@@ -95,16 +99,3 @@ kube-prometheus-stack:
             resources:
               requests:
                 storage: 100Gi
-    additionalPrometheusRulesMap:
-      alert-test:
-        groups:
-        - name: "kubernetes.rules"
-          rules:
-          - alert: KubernetesNodeReady
-            expr: kube_node_status_condition{condition="Ready",status="true"} == 0
-            for: 10m
-            labels:
-              severity: critical
-            annotations:
-              summary: Kubernetes Node ready (instance {{ $labels.instance }})
-              description: "Node {{ $labels.node }} has been unready for a long time\n  VALUE = {{ $value }}\n  LABELS = {{ $labels }}"
