@@ -1,4 +1,5 @@
 descheduler:
+  schedule: "*/10 * * * *"
   deschedulerPolicy:
     strategies:
       RemoveDuplicates:
