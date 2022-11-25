@@ -61,12 +61,3 @@ home-assistant:
           prometheus:
             namespace: hass
 
-  influxdb:
-    enabled: true
-    architecture: standalone
-    database: home_assistant
-    authEnabled: false
-    persistence:
-      enabled: true
-      storageClass: longhorn
-      size: 8Gi
