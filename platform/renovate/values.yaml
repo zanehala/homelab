@@ -7,7 +7,7 @@ renovate:
         "platform": "gitea",
         "endpoint": "https://git.zanelab.com/api/v1",
         "gitAuthor": "Renovate Bot <bot@renovateapp.com>",
-        "autodiscover": true
+        "autodiscover": true,
         "automerge": false
       }
   existingSecret: renovate-secret
