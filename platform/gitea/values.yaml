@@ -21,6 +21,7 @@ gitea:
       server:
         LANDING_PAGE: explore
         ROOT_URL: https://git.zanelab.com
+        ALLOWED_HOST_LIST: *.zanelab.com
   persistence:
     storageClass: longhorn
   postgresql:
