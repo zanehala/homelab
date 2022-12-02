@@ -22,7 +22,7 @@ gitea:
         LANDING_PAGE: explore
         ROOT_URL: https://git.zanelab.com
       webhook:
-        ALLOWED_HOST_LIST: "*.zanelab.com"
+        ALLOWED_HOST_LIST: "*.zanelab.com,*.slack.com"
       Time:
         DEFAULT_UI_LOCATION: America/Chicago
   persistence:
