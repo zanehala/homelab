@@ -40,4 +40,4 @@ esphome:
       #   existingClaim: esphome2-pvc
   
   controller:
-    replicas: 1
+    replicas: 0
