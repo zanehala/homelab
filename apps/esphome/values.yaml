@@ -29,3 +29,6 @@ esphome:
       mountPath: /config
       readOnly: false
       storageClass: longhorn
+  
+  controller:
+    replicas: 0
