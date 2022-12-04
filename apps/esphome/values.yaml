@@ -1,6 +1,6 @@
 esphome:
   image:
-    tag: 2022.11
+    tag: "2022.11"
 
   ingress:
     main:
