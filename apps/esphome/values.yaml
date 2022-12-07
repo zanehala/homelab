@@ -1,6 +1,6 @@
 esphome:
   image:
-    tag: latest
+    tag: "2022.11"
 
   ingress:
     main:
@@ -25,7 +25,19 @@ esphome:
       enabled: true
       type: pvc
       accessMode: ReadWriteOnce
-      size: 1Gi
+      size: 5Gi
       mountPath: /config
       readOnly: false
       storageClass: longhorn
+      # pvc:
+      #   enabled: true
+      #   type: pvc
+      #   accessMode: ReadWriteOnce
+      #   size: 5Gi
+      #   mountPath: /config
+      #   readOnly: false
+      #   storageClass: longhorn
+      #   existingClaim: esphome2-pvc
+  
+  controller:
+    replicas: 1
