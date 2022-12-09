@@ -6,17 +6,6 @@ steps:
 - name: helm-lint
   image: alpine/helm
   commands: 
-  - |
-    refreshdone=0
-    subcharts=$(ls `find . -name charts | sed 's/$/\/*\/Chart.yaml/'` 2>/dev/null | sed 's/\/Chart\.yaml$//')
-    for chart in . $subcharts; do
-      if helm dep list $chart | grep -v '\(^\|WARNING: no dependencies.*\|STATUS\|ok\|unpacked\)\s*$' >/dev/null; then
-        if [ "$refreshdone" = 0 ]; then
-          helm dep build $chart
-          refreshdone=1
-          helm lint $chart
-        else
-          helm dep build --skip-refresh $chart
-        fi
-      fi
-    done
+  - find . -name Chart.yaml -print | sed s/Chart.yaml//g | awk -F"/" '{print NF $0}' | sort -nr | sed 's/^.//' | xargs -n1 helm dep build
+  - find . -name Chart.yaml -print | sed s/Chart.yaml//g | awk -F"/" '{print NF $0}' | sort -nr | sed 's/^.//' | xargs -n1 helm dep lint
+
