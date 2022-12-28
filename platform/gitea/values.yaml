@@ -25,6 +25,10 @@ gitea:
         ALLOWED_HOST_LIST: "*.zanelab.com,*.slack.com"
       Time:
         DEFAULT_UI_LOCATION: America/Chicago
+      repository:
+        upload:
+          FILE_MAX_SIZE: 10
+          MAX_FILES: 10
   persistence:
     storageClass: longhorn
   postgresql:
