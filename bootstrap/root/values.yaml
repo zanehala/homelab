@@ -1,5 +1,5 @@
 gitops:
-  repo: http://gitea-http.gitea:3000/ops/homelab
+  repo: http://gitea-http.gitea:3000/zhala/homelab
   revision: master
 stacks:
   - name: bootstrap
