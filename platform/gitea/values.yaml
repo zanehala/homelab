@@ -26,6 +26,7 @@ gitea:
       Time:
         DEFAULT_UI_LOCATION: America/Chicago
       repository:
+        ENABLE_PUSH_CREATE_USER: true
         upload:
           FILE_MAX_SIZE: 10
           MAX_FILES: 10
