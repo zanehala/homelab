@@ -6,7 +6,7 @@ steps:
 - name: helm-lint
   image: alpine/helm
   commands:
-  - apk add yq 
+  # - apk add yq
   - find . -name Chart.yaml -print | sed s/Chart.yaml//g | awk -F"/" '{print NF $0}' | sort -nr | sed 's/^.//' | xargs -n1 helm dep build
   - find . -name Chart.yaml -print | sed s/Chart.yaml//g | awk -F"/" '{print NF $0}' | sort -nr | sed 's/^.//' | xargs -n1 helm lint
-  - find . -name Chart.yaml -print | sed s/Chart.yaml//g | awk -F"/" '{print NF $0}' | sort -nr | sed 's/^.//' | xargs -n1 helm template | yq '..|.image? | select(.)' | sort -u
+  # - find . -name Chart.yaml -print | sed s/Chart.yaml//g | awk -F"/" '{print NF $0}' | sort -nr | sed 's/^.//' | xargs -n1 helm template | yq '..|.image? | select(.)' | sort -u
