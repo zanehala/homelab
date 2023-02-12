@@ -7,6 +7,7 @@ steps:
   image: alpine/helm
   commands:
   # - apk add yq
+  - apk add python3
   - helm plugin install https://github.com/jtyr/kubeconform-helm
   - find . -name Chart.yaml -print | sed s/Chart.yaml//g | awk -F"/" '{print NF $0}' | sort -nr | sed 's/^.//' | xargs -n1 helm dep build
   - find . -name Chart.yaml -print | sed s/Chart.yaml//g | awk -F"/" '{print NF $0}' | sort -nr | sed 's/^.//' | xargs -n1 helm lint
