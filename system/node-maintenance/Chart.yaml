@@ -1,0 +1,7 @@
+apiVersion: v2
+name: node-maintenance
+version: 0.0.0
+dependencies:
+  - name: node-maintenance
+    version: 0.1.0
+    repository: https://git.zanelab.com/api/packages/zhala/helm
