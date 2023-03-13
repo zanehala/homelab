@@ -5,7 +5,7 @@ go 1.19
 require (
 	github.com/hashicorp/vault/api v1.9.0
 	github.com/sethvargo/go-password v0.2.0
-	gopkg.in/yaml.v2 v2.2.5
+	gopkg.in/yaml.v2 v2.4.0
 	gopkg.in/yaml.v3 v3.0.1
 )
 
