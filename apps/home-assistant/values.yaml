@@ -1,4 +1,6 @@
 home-assistant:
+  image:
+    tag: stable
   ingress:
     main:
       enabled: true
