@@ -1,7 +1,7 @@
 cloudflared:
   image:
     repository: cloudflare/cloudflared
-    tags: 2023.3.1
+    tag: 2023.3.1
   credentials:
     existingSecret: cloudflared-credentials
   config:
