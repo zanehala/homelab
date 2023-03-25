@@ -1,5 +1,6 @@
 home-assistant:
   image:
+    repository: ghcr.io/home-assistant/home-assistant
     tag: stable
   ingress:
     main:

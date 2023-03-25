@@ -1,5 +1,6 @@
 seafile:
   image:
+    repository: seafileltd/seafile-mc
     tag: 9.0.10
   ingress:
     main:
