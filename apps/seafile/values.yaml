@@ -1,4 +1,6 @@
 seafile:
+  image:
+    tag: 9.0.10
   ingress:
     main:
       enabled: true
