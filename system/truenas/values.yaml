@@ -6,6 +6,10 @@ democratic-csi:
   controller:
     driver:
       image: docker.io/democraticcsi/democratic-csi:v1.8.3
+  node:
+    driver:
+     image: docker.io/democraticcsi/democratic-csi:v1.8.3
+
   storageClasses:
   - name: freenas-nfs-csi
     defaultClass: false
