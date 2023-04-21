@@ -19,6 +19,7 @@ esphome:
             - *host
   env:
     DISABLE_HA_AUTHENTICATION: true
+    ESPHOME_DASHBOARD_USE_PING: true
 
   persistence:
     pvc:
