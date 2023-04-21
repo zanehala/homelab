@@ -63,6 +63,3 @@ home-assistant:
             - 10.0.1.0/24
           prometheus:
             namespace: hass
-          
-          status_use_ping: true
-
