@@ -5,6 +5,9 @@ loki-stack:
     config:
       limits_config:
         max_entries_limit_per_query: 0
+      table_manager:
+        retention_deletes_enabled: true
+        retention_period: 60d
     persistence:
       enabled: true
       accessModes:
