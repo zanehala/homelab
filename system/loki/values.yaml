@@ -11,7 +11,8 @@ loki-stack:
         retention_period: 60d
       compactor:
         retention_enabled: true
-        deletion_mode: filter-and-delete
+        delete_request_cancel_period: 10m
+        retention_delete_delay: 10m
     persistence:
       enabled: true
       accessModes:
