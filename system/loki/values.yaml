@@ -8,6 +8,9 @@ loki-stack:
       table_manager:
         retention_deletes_enabled: true
         retention_period: 60d
+      compactor:
+        retention_enabled: true
+        deletion_mode: filter-and-delete
     persistence:
       enabled: true
       accessModes:
