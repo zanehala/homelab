@@ -35,10 +35,9 @@ frigate:
     annotations:
       cert-manager.io/cluster-issuer: letsencrypt-prod
     hosts:
-      - host: &host frigate.zanelab.com
-        paths:
-          - paths: /
-            pathType: Prefix
+    - host: &host frigate.zanelab.com
+      paths:
+        - '/'
 
     tls:
       - secretName: frigate-tls-certificate
