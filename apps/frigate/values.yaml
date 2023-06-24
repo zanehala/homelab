@@ -28,6 +28,10 @@ frigate:
       storageClass: freenas-nfs-csi
       accessMode: ReadWriteOnce
       size: 50Gi
+  extraVolumeMounts:
+  - name: data
+    mountPath: /media
+    subPath: frigate
 
   ingress:
     enabled: true
