@@ -15,3 +15,32 @@ frigate:
               roles:
                 - detect  
                 - rtmp
+                - record
+    record:
+      enabled: true
+      retain:
+        days: 7
+        mode: all
+
+  persistence:
+    data:
+      enabled: true
+      storageClass: freenas-nfs-csi
+      accessMode: ReadWriteOnce
+      size: 50Gi
+
+  ingress:
+    enabled: true
+
+    annotations:
+      cert-manager.io/cluster-issuer: letsencrypt-prod
+    hosts:
+      - host: &host frigate.zanelab.com
+        paths:
+          - path: /
+            pathType: Prefix
+
+    tls:
+      - secretName: frigate-tls-certificate
+        hosts:
+          - *host
