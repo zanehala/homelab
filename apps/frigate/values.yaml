@@ -37,7 +37,7 @@ frigate:
     hosts:
       - host: &host frigate.zanelab.com
         paths:
-          - path: /
+          - paths: /
             pathType: Prefix
 
     tls:
