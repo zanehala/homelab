@@ -2,6 +2,8 @@ frigate:
   envFromSecrets:
     - frigate-rstp-credentials
   config: |
+    mqtt:
+      enabled: false
     cpu1:
       type: cpu
     cameras:
@@ -10,7 +12,7 @@ frigate:
           inputs:
             - path: rtsp://{FRIGATE_RSTP_USERNAME}:{FRIGATE_RTSP_PASSWORD}@20.0.1.4:554/cam/realmonitor?channel=1&subtype=2
               roles:
-                - detect
+                - detect  
                 - rtmp
         width: 1280
         height: 720
