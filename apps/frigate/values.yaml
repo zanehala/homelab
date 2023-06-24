@@ -4,8 +4,9 @@ frigate:
   config: |
     mqtt:
       enabled: false
-    cpu1:
-      type: cpu
+    detectors:
+      detector_name:
+        type: cpu
     cameras:
       back_garage:
         ffmpeg:
