@@ -27,7 +27,7 @@ frigate:
       enabled: true
       storageClass: freenas-nfs-csi
       accessMode: ReadWriteOnce
-      size: 500Gi
+      size: 700Gi
   extraVolumeMounts:
   - name: data
     mountPath: /media
