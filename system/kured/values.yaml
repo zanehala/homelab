@@ -1,8 +1,7 @@
 kured:
   configuration:
     annotateNodes: true
-    rebootSentinelCommand: sh -c "! needs-restarting --reboothint"
-    rebootSentinel: /tmp/reboot
+    rebootSentinelCommand: sh -c "! needs-restarting --reboothint || test -f /tmp/reboot"
     drainGracePeriod: 300
     forceReboot: true
     drainTimeout: 600s
