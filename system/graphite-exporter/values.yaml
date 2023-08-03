@@ -1,3 +1,6 @@
 graphite-exporter:
   serviceMonitor:
     enabled: true
+  service:
+    graphite:
+      type: LoadBalancer
