@@ -1,0 +1,7 @@
+apiVersion: v2
+name: graphite-exporter
+version: 0.0.0
+dependencies:
+  - name: graphite-exporter
+    version: 0.1.6
+    repository: https://djjudas21.github.io/charts/

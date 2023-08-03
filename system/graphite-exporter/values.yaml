@@ -1,0 +1,3 @@
+graphite-exporter:
+  serviceMonitor:
+    enabled: true
