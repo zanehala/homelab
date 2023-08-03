@@ -4,3 +4,5 @@ graphite-exporter:
   service:
     graphite:
       type: LoadBalancer
+      annotations:
+        metallb.universe.tf/allow-shared-ip: graphite-exporter
