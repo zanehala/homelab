@@ -6,7 +6,9 @@ frigate:
       enabled: false
     detectors:
       detector_name:
-        type: cpu
+        # type: cpu
+        type: openvino
+        device: AUTO
     cameras:
       back_garage:
         ffmpeg:
