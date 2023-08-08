@@ -24,12 +24,14 @@ frigate:
               roles:
                 - detect  
                 - rtmp
-                - record
+                - record       
     record:
       enabled: true
       retain:
         days: 7
         mode: all
+    ffmpeg:
+      hwaccel_args: preset-vaapi
 
   persistence:
     data:
