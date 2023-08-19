@@ -8,6 +8,14 @@ frigate:
       detector_name:
         type: openvino
         device: AUTO
+        model:
+          path: /openvino-model/ssdlite_mobilenet_v2.xml
+    model:
+      width: 300
+      height: 300
+      input_tensor: nhwc
+      input_pixel_format: bgr
+      labelmap_path: /openvino-model/coco_91cl_bkgr.txt
     cameras:
       back_garage:
         ffmpeg:
@@ -16,12 +24,14 @@ frigate:
               roles:
                 - detect  
                 - rtmp
-                - record
+                - record       
     record:
       enabled: true
       retain:
         days: 7
         mode: all
+    ffmpeg:
+      hwaccel_args: preset-vaapi
 
   persistence:
     data:
@@ -49,3 +59,6 @@ frigate:
       - secretName: frigate-tls-certificate
         hosts:
           - *host
+
+  securityContext:
+    privileged: true
