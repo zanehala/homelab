@@ -27,9 +27,9 @@ frigate:
                 - record       
     record:
       enabled: true
-      retain:
-        days: 7
-        mode: all
+      events:
+        retain:
+          days: 7
     ffmpeg:
       hwaccel_args: preset-vaapi
 
