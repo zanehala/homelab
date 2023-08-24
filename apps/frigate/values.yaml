@@ -29,7 +29,7 @@ frigate:
       enabled: true
       events:
         retain:
-          days: 7
+          default: 7
     ffmpeg:
       hwaccel_args: preset-vaapi
 
