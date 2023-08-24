@@ -9,3 +9,4 @@ token-file: {{ k3s_token_file }}
 tls-san:
   - "{{hostvars[groups['masters'][0]].vip}}"
 {% endif %}
+prefer-bundled-bin: true
