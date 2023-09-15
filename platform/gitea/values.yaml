@@ -30,6 +30,8 @@ gitea:
         upload:
           FILE_MAX_SIZE: 10
           MAX_FILES: 10
+      indexer:
+        REPO_INDEXER_ENABLED: true
   persistence:
     storageClass: longhorn
   postgresql:
