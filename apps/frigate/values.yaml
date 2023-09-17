@@ -17,14 +17,22 @@ frigate:
       input_pixel_format: bgr
       labelmap_path: /openvino-model/coco_91cl_bkgr.txt
     cameras:
-      back_garage:
+      inside_garage:
         ffmpeg:
           inputs:
             - path: rtsp://{FRIGATE_RSTP_USERNAME}:{FRIGATE_RTSP_PASSWORD}@20.0.1.4:554/cam/realmonitor?channel=1&subtype=0
               roles:
                 - detect  
                 - rtmp
-                - record       
+                - record
+      back_yard_garage:
+        ffmpeg:
+          inputs:
+            - path: rtsp://{FRIGATE_RSTP_USERNAME}:{FRIGATE_RTSP_PASSWORD}@20.0.1.5:554/cam/realmonitor?channel=1&subtype=0
+              roles:
+                - detect  
+                - rtmp
+                - record      
     record:
       enabled: true
       events:
