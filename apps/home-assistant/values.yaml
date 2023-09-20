@@ -1,7 +1,7 @@
 home-assistant:
   image:
     repository: ghcr.io/home-assistant/home-assistant
-    tag: 2023.9
+    tag: "2023.9"
   ingress:
     main:
       enabled: true
