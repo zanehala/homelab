@@ -1,0 +1,12 @@
+postgresql:
+  image:
+    registry: docker.io
+    repository: bitnami/postgresql
+    tag: 16.0.0-debian-11-r3
+  auth:
+    existingSecret: postgres-secret
+  primary:
+    persistence:
+      enabled: true
+      storageClass: longhorn
+      size: 8Gi
