@@ -19,6 +19,8 @@ loki-stack:
       - ReadWriteMany
       size: 50Gi
       storageClassName: freenas-nfs-csi
+    rbac:
+      pspEnabled: false
   replicas: 2
 
 
