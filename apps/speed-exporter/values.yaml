@@ -1,0 +1,22 @@
+speedtest-exporter:
+  image:
+    repository: ghcr.io/miguelndecarvalho/speedtest-exporter
+    tag: v3.2.2
+    env:
+      TZ: CST
+
+  service:
+    main:
+      ports:
+        http:
+          enabled: false
+        metrics:
+          enabled: true
+          protocol: TCP
+          port: 9798
+  metrics:
+    enabled: true
+    serviceMonitor:
+      # -- The interval field must use minutes for the padding to calculate properly.
+      interval: 5m
+      scrapeTimeout: 1m
