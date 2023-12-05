@@ -6,3 +6,16 @@ omada-controller:
   podOptions:
     topologySpreadConstraints: []
     defaultSpread: false
+
+  ingress:
+    annotations:
+      cert-manager.io/cluster-issuer: letsencrypt-prod
+    hosts:
+      host: omada.zanelab.com
+      paths:
+        - path: /
+          pathType: Prefix
+    tls:
+      - secretName: omada-controller-tls-certificate
+        hosts:
+          - omada.zanelab.com
