@@ -3,5 +3,6 @@ omada-controller:
     repository: mbentley/omada-controller
     tag: 5.13@sha256:912007aa2157f9cd959290f64a0749fac359108e9b7b84c33aa2e6331225bb49
   
-  podOptions.topologySpreadConstraints: []
-  podOptions.defaultSpread: false
+  podOptions:
+    topologySpreadConstraints: []
+    defaultSpread: false
