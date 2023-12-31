@@ -34,6 +34,12 @@ gitea:
         REPO_INDEXER_ENABLED: true
   persistence:
     storageClass: longhorn
+    mount: true
+    create: false
+    claimName: data-gitea-0
   postgresql:
+    enabled: true
     persistence:
       storageClass: longhorn
+  postgresql-ha:
+    enabled: false
