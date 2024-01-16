@@ -3,5 +3,5 @@ name: postgresql
 version: 0.0.0
 dependencies:
   - name: postgresql
-    version: 13.2.29
+    version: 13.2.30
     repository: oci://registry-1.docker.io/bitnamicharts
