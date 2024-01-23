@@ -36,7 +36,7 @@ to a fully functioning cluster.
     <td>Automate bare metal provisioning and configuration</td>
   </tr>
   <tr>
-    <td><img width="32" src="https://cncf-branding.netlify.app/img/projects/argo/icon/color/argo-icon-color.svg"></td>
+    <td><img width="32" src="https://raw.githubusercontent.com/cncf/artwork/main/projects/argo/icon/color/argo-icon-color.svg"></td>
     <td><a href="https://argoproj.github.io/cd">ArgoCD</a></td>
     <td>GitOps tool built to deploy applications to Kubernetes</td>
   </tr>
@@ -66,17 +66,17 @@ to a fully functioning cluster.
     <td>Operational dashboards</td>
   </tr>
   <tr>
-    <td><img width="32" src="https://cncf-branding.netlify.app/img/projects/helm/icon/color/helm-icon-color.svg"></td>
+    <td><img width="32" src="https://raw.githubusercontent.com/cncf/artwork/main/projects/helm/icon/color/helm-icon-color.svg"></td>
     <td><a href="https://helm.sh">Helm</a></td>
     <td>The package manager for Kubernetes</td>
   </tr>
   <tr>
-    <td><img width="32" src="https://cncf-branding.netlify.app/img/projects/k3s/icon/color/k3s-icon-color.svg"></td>
+    <td><img width="32" src="https://raw.githubusercontent.com/cncf/artwork/main/projects/k3s/icon/color/k3s-icon-color.svg"></td>
     <td><a href="https://k3s.io">K3s</a></td>
     <td>Lightweight distribution of Kubernetes</td>
   </tr>
   <tr>
-    <td><img width="32" src="https://cncf-branding.netlify.app/img/projects/kubernetes/icon/color/kubernetes-icon-color.svg"></td>
+    <td><img width="32" src="https://raw.githubusercontent.com/cncf/artwork/main/projects/kubernetes/icon/color/kubernetes-icon-color.svg"></td>
     <td><a href="https://kubernetes.io">Kubernetes</a></td>
     <td>Container-orchestration system, the backbone of this project</td>
   </tr>
@@ -86,7 +86,7 @@ to a fully functioning cluster.
     <td>Log aggregation system</td>
   </tr>
   <tr>
-    <td><img width="32" src="https://cncf-branding.netlify.app/img/projects/longhorn/icon/color/longhorn-icon-color.svg"></td>
+    <td><img width="32" src="https://raw.githubusercontent.com/cncf/artwork/main/projects/longhorn/icon/color/longhorn-icon-color.svg"></td>
     <td><a href="https://longhorn.io">Longhorn</a></td>
     <td>Cloud native distributed block storage for Kubernetes</td>
   </tr>
@@ -101,7 +101,7 @@ to a fully functioning cluster.
     <td>Kubernetes Ingress Controller</td>
   </tr>
   <tr>
-    <td><img width="32" src="https://cncf-branding.netlify.app/img/projects/prometheus/icon/color/prometheus-icon-color.svg"></td>
+    <td><img width="32" src="https://raw.githubusercontent.com/cncf/artwork/main/projects/prometheus/icon/color/prometheus-icon-color.svg"></td>
     <td><a href="https://prometheus.io">Prometheus</a></td>
     <td>Systems monitoring and alerting toolkit</td>
   </tr>
