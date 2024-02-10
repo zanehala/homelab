@@ -66,8 +66,7 @@ argo-cd:
       ingressClassName: nginx
       annotations:
         cert-manager.io/cluster-issuer: letsencrypt-prod
-      hostname:
-        - &host argocd.zanelab.com
+      hostname: &host argocd.zanelab.com
       extraTls:
         - secretName: argocd-tls-certificate
           hosts:
