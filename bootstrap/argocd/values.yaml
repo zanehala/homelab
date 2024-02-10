@@ -3,6 +3,8 @@ argo-cd:
     extraArgs:
       - --insecure
     config:
+      params:
+        server.insecure: true
       statusbadge.enabled: 'true'
       resource.customizations.health.argoproj.io_Application: |
         hs = {}
@@ -64,9 +66,9 @@ argo-cd:
       ingressClassName: nginx
       annotations:
         cert-manager.io/cluster-issuer: letsencrypt-prod
-      hosts:
+      hostname:
         - &host argocd.zanelab.com
-      tls:
+      extraTls:
         - secretName: argocd-tls-certificate
           hosts:
             - *host
