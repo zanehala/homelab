@@ -46,6 +46,11 @@ kube-prometheus-stack:
           scheme: http
           static_configs:
             - targets: ['192.168.1.1:9111']
+        - job_name: "rtlamr-exporter"
+          scrape_interval: 60s
+          scheme: http
+          static_configs:
+            - targets: ['raspberrypi.local:9090']
         - job_name: kubernetes-service-endpoints
           kubernetes_sd_configs:
           - role: pod
