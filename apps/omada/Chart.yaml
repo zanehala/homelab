@@ -1,7 +1,0 @@
-apiVersion: v2
-name: omada-controller
-version: 0.0.0
-dependencies:
-  - name: omada-controller
-    version: 4.4.2
-    repository:  https://k8s-at-home.com/charts/
