@@ -3,5 +3,5 @@ name: graphite-exporter
 version: 0.0.0
 dependencies:
   - name: graphite-exporter
-    version: 0.1.6
+    version: 0.1.7
     repository: https://djjudas21.github.io/charts/
