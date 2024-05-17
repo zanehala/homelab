@@ -18,5 +18,5 @@ speedtest-exporter:
     enabled: true
     serviceMonitor:
       # -- The interval field must use minutes for the padding to calculate properly.
-      interval: 5m
+      interval: 10m
       scrapeTimeout: 1m
