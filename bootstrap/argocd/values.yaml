@@ -102,7 +102,7 @@ argo-cd:
     
     initContainers:
     - name: download-tools
-      image: alpine:3.19
+      image: alpine:3.20
       command: [sh, -c]
       envFrom:
         - secretRef:

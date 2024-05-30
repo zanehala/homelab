@@ -2,7 +2,7 @@ postgresql:
   image:
     registry: docker.io
     repository: bitnami/postgresql
-    tag: 16.3.0-debian-12-r8
+    tag: 16.3.0-debian-12-r12
   auth:
     existingSecret: postgres-secret
   primary:
