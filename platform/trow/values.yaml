@@ -28,3 +28,6 @@ trow:
           - *host
   volumeClaim:
     storageClassName: freenas-nfs-csi
+    resources:
+      requests:
+        storage: 25Gi
