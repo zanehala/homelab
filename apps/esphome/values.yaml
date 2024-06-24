@@ -1,7 +1,7 @@
 esphome:
   image:
     repository: esphome/esphome
-    tag: "stable"
+    tag: "2024.6"
   ingress:
     main:
       enabled: true
