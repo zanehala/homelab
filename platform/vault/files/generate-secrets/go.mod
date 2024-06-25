@@ -6,7 +6,7 @@ toolchain go1.22.4
 
 require (
 	github.com/hashicorp/vault/api v1.14.0
-	github.com/sethvargo/go-password v0.3.0
+	github.com/sethvargo/go-password v0.3.1
 	gopkg.in/yaml.v2 v2.4.0
 	gopkg.in/yaml.v3 v3.0.1
 )
