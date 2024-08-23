@@ -1,7 +1,7 @@
-apiVersion: v2
-name: authentik
-version: 0.0.0
-dependencies:
-  - name: authentik
-    version: 2022.12.4
-    repository: https://charts.goauthentik.io
+# apiVersion: v2
+# name: authentik
+# version: 0.0.0
+# dependencies:
+#   - name: authentik
+#     version: 2022.12.4
+#     repository: https://charts.goauthentik.io
