@@ -1,29 +1,29 @@
-apiVersion: postgres-operator.crunchydata.com/v1beta1
-kind: PostgresCluster
-metadata:
-  name: hippo
-spec:
-  image: registry.developers.crunchydata.com/crunchydata/crunchy-postgres:ubi8-16.4-0
-  postgresVersion: 16
-  instances:
-    - name: instance1
-      dataVolumeClaimSpec:
-        storageClassName: freenas-nfs-csi
-        accessModes:
-        - "ReadWriteOnce"
-        resources:
-          requests:
-            storage: 1Gi
-  backups:
-    pgbackrest:
-      image: registry.developers.crunchydata.com/crunchydata/crunchy-pgbackrest:ubi8-2.52.1-1
-      repos:
-      - name: repo1
-        volume:
-          volumeClaimSpec:
-            storageClassName: longhorn
-            accessModes:
-            - "ReadWriteOnce"
-            resources:
-              requests:
-                storage: 1Gi
+# apiVersion: postgres-operator.crunchydata.com/v1beta1
+# kind: PostgresCluster
+# metadata:
+#   name: hippo
+# spec:
+#   image: registry.developers.crunchydata.com/crunchydata/crunchy-postgres:ubi8-16.4-0
+#   postgresVersion: 16
+#   instances:
+#     - name: instance1
+#       dataVolumeClaimSpec:
+#         storageClassName: freenas-nfs-csi
+#         accessModes:
+#         - "ReadWriteOnce"
+#         resources:
+#           requests:
+#             storage: 1Gi
+#   backups:
+#     pgbackrest:
+#       image: registry.developers.crunchydata.com/crunchydata/crunchy-pgbackrest:ubi8-2.52.1-1
+#       repos:
+#       - name: repo1
+#         volume:
+#           volumeClaimSpec:
+#             storageClassName: longhorn
+#             accessModes:
+#             - "ReadWriteOnce"
+#             resources:
+#               requests:
+#                 storage: 1Gi
