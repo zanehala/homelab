@@ -1,0 +1,7 @@
+apiVersion: v2
+name: crunchy-postgres
+version: 0.0.0
+dependencies:
+  - name: pgo
+    version: 5.6.1
+    repository: registry.developers.crunchydata.com/crunchydata/
