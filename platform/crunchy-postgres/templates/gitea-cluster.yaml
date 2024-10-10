@@ -32,4 +32,4 @@ spec:
     dynamicConfiguration:
       postgresql:
         pg_hba:
-          - "hostssl all all all password"
+          - "host all all all password"
