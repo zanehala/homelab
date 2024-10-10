@@ -32,6 +32,12 @@ gitea:
           MAX_FILES: 10
       indexer:
         REPO_INDEXER_ENABLED: true
+      database:
+        DB_TYPE: postgres
+        HOST: gitea-postgress-ha.gitea.svc.cluster.local:5432
+        NAME: gitea
+        PASSWD: gitea
+        USER: gitea
   persistence:
     storageClass: longhorn
     mount: true
