@@ -28,3 +28,8 @@ spec:
             resources:
               requests:
                 storage: 10Gi
+  patroni:
+    dynamicConfiguration:
+      postgresql:
+        pg_hba:
+          - "hostssl all all all scram-sha-256"
