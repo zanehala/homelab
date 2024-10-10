@@ -44,8 +44,6 @@ gitea:
     create: false
     claimName: data-gitea-0
   postgresql:
-    enabled: true
-    persistence:
-      storageClass: longhorn
+    enabled: false
   postgresql-ha:
     enabled: false
