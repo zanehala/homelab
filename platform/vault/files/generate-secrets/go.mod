@@ -2,7 +2,7 @@ module git.zanelab.com/zanehala/homelab/vault/init
 
 go 1.22
 
-toolchain go1.23.3
+toolchain go1.23.4
 
 require (
 	github.com/hashicorp/vault/api v1.15.0

@@ -3,5 +3,5 @@ name: coder
 version: 0.0.0
 dependencies:
   - name: coder
-    version: 2.17.2
+    version: 2.18.0
     repository: https://helm.coder.com/v2
