@@ -9,6 +9,9 @@ woodpecker:
       WOODPECKER_GITEA_URL: http://git.zanelab.com
       WOODPECKER_GITEA_CLIENT: 8c05ce54-ca95-4316-b351-6bfb23917397
 
+    extraSecretNamesForEnvFrom:
+      - woodpecker-es
+
     ingress:
       enabled: true
       ingressClassName: nginx
