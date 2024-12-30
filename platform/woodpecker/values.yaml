@@ -1,12 +1,14 @@
 woodpecker:
   agent:
-    registry: docker.io
-    repository: woodpeckerci/woodpecker-agent
-    tag: 2.8.2
+    image:
+      registry: docker.io
+      repository: woodpeckerci/woodpecker-agent
+      tag: 2.8.2
   server:
-    registry: docker.io
-    repository: woodpeckerci/woodpecker-server
-    tag: 2.8.2
+    image:
+      registry: docker.io
+      repository: woodpeckerci/woodpecker-server
+      tag: 2.8.2
 
     env:
       WOODPECKER_GITEA: TRUE
