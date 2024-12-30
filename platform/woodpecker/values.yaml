@@ -4,6 +4,11 @@ woodpecker:
     repository: woodpeckerci/woodpecker-server
     tag: 2.0.3
 
+    env:
+      WOODPECKER_GITEA: TRUE
+      WOODPECKER_GITEA_URL: http://git.zanelab.com
+      WOODPECKER_GITEA_CLIENT: 8c05ce54-ca95-4316-b351-6bfb23917397
+
     ingress:
       enabled: true
       ingressClassName: nginx
