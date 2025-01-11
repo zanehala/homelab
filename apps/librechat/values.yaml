@@ -22,6 +22,7 @@ librechat:
     configEnv:
       BEDROCK_AWS_DEFAULT_REGION: "us-east-1"
       ALLOW_REGISTRATION: "true"
+      BEDROCK_AWS_MODELS: "us.anthropic.claude-3-5-sonnet-20241022-v2:0,us.anthropic.claude-3-5-haiku-20241022-v1:0"
     configYamlContent: |
       version: 1.0.8 
       cache: true
