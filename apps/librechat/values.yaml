@@ -9,6 +9,7 @@ librechat:
     className: nginx
     annotations:
       cert-manager.io/cluster-issuer: letsencrypt-prod
+      nginx.ingress.kubernetes.io/proxy-body-size: 0m
     hosts:
       - host: &host librechat.zanelab.com
         paths:
