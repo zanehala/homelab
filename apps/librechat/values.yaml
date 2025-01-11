@@ -1,0 +1,23 @@
+librechat:
+  image:
+    repository: danny-avila/librechat
+    registry: ghcr.io
+    tag: "v0.7.6"
+
+  ingress:
+    enabled: true
+    className: nginx
+    annotations:
+      cert-manager.io/cluster-issuer: letsencrypt-prod
+    hosts:
+      - host: &host librechat.zanelab.com
+        paths:
+          - path: /
+            pathType: Prefix
+    tls:
+      - secretName: librechat-tls-certificate
+        hosts:
+          - *host
+  librechat:
+    configEnv:
+      BEDROCK_AWS_DEFAULT_REGION: "us-east-1"
