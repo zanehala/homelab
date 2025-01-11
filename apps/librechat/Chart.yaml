@@ -4,4 +4,4 @@ version: 0.0.0
 dependencies:
   - name: librechat
     version: 1.8.4
-    repository: https://blue-atlas.de/charts/
+    repository: https://charts.blue-atlas.de
