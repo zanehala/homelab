@@ -21,3 +21,4 @@ librechat:
   librechat:
     configEnv:
       BEDROCK_AWS_DEFAULT_REGION: "us-east-1"
+      ALLOW_REGISTRATION: "true"
