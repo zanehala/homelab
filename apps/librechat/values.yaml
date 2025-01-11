@@ -18,6 +18,10 @@ librechat:
       - secretName: librechat-tls-certificate
         hosts:
           - *host
+
+  librechat-rag-api:
+    enabled: true
+
   librechat:
     configEnv:
       BEDROCK_AWS_DEFAULT_REGION: "us-east-1"
