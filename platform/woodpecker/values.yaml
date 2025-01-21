@@ -8,7 +8,7 @@ woodpecker:
     image:
       registry: docker.io
       repository: woodpeckerci/woodpecker-server
-      tag: v2.8.2
+      tag: v3.0.1
 
     env:
       WOODPECKER_GITEA: TRUE
