@@ -3,7 +3,7 @@ woodpecker:
     image:
       registry: docker.io
       repository: woodpeckerci/woodpecker-agent
-      tag: v2.8.2
+      tag: v3.0.1
   server:
     image:
       registry: docker.io
