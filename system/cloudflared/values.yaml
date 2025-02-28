@@ -1,7 +1,7 @@
 cloudflared:
   image:
     repository: cloudflare/cloudflared
-    tag: 2025.1.0
+    tag: 2025.2.1
   credentials:
     existingSecret: cloudflared-credentials
   config:
