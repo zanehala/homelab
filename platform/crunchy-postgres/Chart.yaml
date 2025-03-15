@@ -3,5 +3,5 @@ name: crunchy-postgres
 version: 0.0.0
 dependencies:
   - name: pgo
-    version: 5.7.2
+    version: 5.7.4
     repository: oci://registry.developers.crunchydata.com/crunchydata
