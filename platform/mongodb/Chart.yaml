@@ -3,5 +3,5 @@ name: mongodb
 version: 0.0.0
 dependencies:
   - name: mongodb
-    version: 16.4.10
+    version: 16.5.6
     repository: oci://registry-1.docker.io/bitnamicharts
