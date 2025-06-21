@@ -21,26 +21,28 @@ loki-stack:
       storageClassName: freenas-nfs-csi
     rbac:
       pspEnabled: false
-    gateway:
-      enabled: true
-      ingress:
-        enabled: true
-        hosts:
-          - host: gateway.loki.zanelab.com
-            paths:
-              - path: /
-                pathType: Prefix
-    # ingress:
+    # gateway:
     #   enabled: true
-    #   ingressClassName: nginx
-    #   annotations:
-    #     cert-manager.io/cluster-issuer: letsencrypt-prod
-    #   hosts:
-    #     - host: loki.zanelab.com
-    #   tls:
-    #     - hosts:
-    #       - loki.zanelab.com
-    #       secretName: loki-tls-certificate
+    #   ingress:
+    #     enabled: true
+    #     hosts:
+    #       - host: gateway.loki.zanelab.com
+    #         paths:
+    #           - path: /
+    #             pathType: Prefix
+    ingress:
+      enabled: true
+      ingressClassName: nginx
+      annotations:
+        cert-manager.io/cluster-issuer: letsencrypt-prod
+      hosts:
+        - host: loki.zanelab.com
+          paths:
+            - path: /
+      tls:
+        - hosts:
+          - loki.zanelab.com
+          secretName: loki-tls-certificate
   replicas: 2
 
 
