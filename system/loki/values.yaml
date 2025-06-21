@@ -38,7 +38,7 @@ loki-stack:
       hosts:
         - host: loki.zanelab.com
           paths:
-            - path: /
+            - /
       tls:
         - hosts:
           - loki.zanelab.com
