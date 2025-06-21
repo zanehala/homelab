@@ -32,7 +32,7 @@ loki-stack:
       hosts:
         - host: loki.zanelab.com
           paths:
-            - path: /loki/api/v1/push
+            - path: /
               pathType: Prefix 
       tls:
         - hosts:
