@@ -29,8 +29,8 @@ loki-stack:
       hosts:
         - host: loki.zanelab.com
           paths:
-          - path: /
-            pathType: Prefix
+            - path: /
+              pathType: Prefix
       tls:
         - hosts:
           - loki.zanelab.com
