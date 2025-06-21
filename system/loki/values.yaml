@@ -31,10 +31,10 @@ loki-stack:
           - /loki/api/v1/push
       hosts:
         - loki.zanelab.com
-      tls:
-        - hosts:
-          - loki.zanelab.com
-          secretName: loki-tls-certificate
+      tls: []
+        # - hosts:
+        #   - loki.zanelab.com
+        #   secretName: loki-tls-certificate
   replicas: 2
 
 
