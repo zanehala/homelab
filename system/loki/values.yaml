@@ -21,6 +21,8 @@ loki-stack:
       storageClassName: freenas-nfs-csi
     rbac:
       pspEnabled: false
+    gateway:
+      enabled: false
     ingress:
       enabled: true
       ingressClassName: nginx
