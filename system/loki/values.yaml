@@ -23,6 +23,8 @@ loki-stack:
       pspEnabled: false
     gateway:
       enabled: false
+      ingress:
+        enabled: false
     ingress:
       enabled: true
       ingressClassName: nginx
