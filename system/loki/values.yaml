@@ -22,20 +22,25 @@ loki-stack:
     rbac:
       pspEnabled: false
     gateway:
-      enabled: false
-      ingress:
-        enabled: false
-    ingress:
       enabled: true
-      ingressClassName: nginx
-      annotations:
-        cert-manager.io/cluster-issuer: letsencrypt-prod
-      hosts:
-        - host: loki.zanelab.com
-      tls:
-        - hosts:
-          - loki.zanelab.com
-          secretName: loki-tls-certificate
+      ingress:
+        enabled: true
+        hosts:
+          - host: gateway.loki.zanelab.com
+            paths:
+              - path: /
+                pathType: Prefix
+    # ingress:
+    #   enabled: true
+    #   ingressClassName: nginx
+    #   annotations:
+    #     cert-manager.io/cluster-issuer: letsencrypt-prod
+    #   hosts:
+    #     - host: loki.zanelab.com
+    #   tls:
+    #     - hosts:
+    #       - loki.zanelab.com
+    #       secretName: loki-tls-certificate
   replicas: 2
 
 
