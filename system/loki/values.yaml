@@ -33,7 +33,7 @@ loki-stack:
         - loki.zanelab.com
       tls:
         - hosts:
-            - loki.zanelab.com
+          - loki.zanelab.com
           secretName: loki-tls-certificate
   replicas: 2
 
