@@ -28,13 +28,14 @@ loki-stack:
       annotations:
         cert-manager.io/cluster-issuer: letsencrypt-prod
       paths:
-        - /loki/api/v1/push
+        distributor:
+          - /loki/api/v1/push
       hosts:
         - loki.zanelab.com
       tls:
-        - secretName: loki-tls-certificate
-          hosts:
+        - hosts:
             - loki.zanelab.com
+          secretName: loki-tls-certificate
   replicas: 2
 
 
