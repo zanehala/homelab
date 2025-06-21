@@ -26,11 +26,11 @@ loki-stack:
       className: nginx
       annotations:
         cert-manager.io/cluster-issuer: letsencrypt-prod
+      paths:
+        distributor:
+          - /loki/api/v1/push
       hosts:
         - host: loki.zanelab.com
-          paths:
-            - path: /
-              pathType: Prefix 
       tls:
         - hosts:
           - loki.zanelab.com
