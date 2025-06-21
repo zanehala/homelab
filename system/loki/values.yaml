@@ -23,7 +23,7 @@ loki-stack:
       pspEnabled: false
     ingress:
       enabled: true
-      className: nginx
+      ingressClassName: nginx
       annotations:
         cert-manager.io/cluster-issuer: letsencrypt-prod
       paths:
