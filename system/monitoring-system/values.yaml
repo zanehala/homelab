@@ -104,7 +104,7 @@ kube-prometheus-stack:
               - ReadWriteMany
             resources:
               requests:
-                storage: 300Gi
+                storage: 350Gi
 
   prometheus-node-exporter:
     extraArgs:
