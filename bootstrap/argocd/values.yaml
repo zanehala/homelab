@@ -66,6 +66,7 @@ argo-cd:
       ingressClassName: nginx
       annotations:
         cert-manager.io/cluster-issuer: letsencrypt-prod
+        nginx.ingress.kubernetes.io/proxy-body-size: 0m
       hostname: &host argocd.zanelab.com
       extraTls:
         - secretName: argocd-tls-certificate
