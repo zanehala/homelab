@@ -51,6 +51,12 @@ kube-prometheus-stack:
           scheme: http
           static_configs:
             - targets: ['192.168.1.245:9090']
+        - job_name: "UPS"
+          metrics_path: /ups_metrics
+          scrape_interval: 30s
+          scheme: http
+          static_configs:
+            - targets: ['10.0.1.5:9199']
         - job_name: kubernetes-service-endpoints
           kubernetes_sd_configs:
           - role: pod
