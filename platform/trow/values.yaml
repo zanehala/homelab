@@ -30,4 +30,4 @@ trow:
     storageClassName: freenas-nfs-csi
     resources:
       requests:
-        storage: 25Gi
+        storage: 50Gi
