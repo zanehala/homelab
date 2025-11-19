@@ -1,7 +1,7 @@
 seafile:
   image:
     repository: seafileltd/seafile-mc
-    tag: 10.0.1
+    tag: 13.0.12
   ingress:
     main:
       enabled: true
