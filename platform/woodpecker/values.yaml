@@ -3,12 +3,12 @@ woodpecker:
     image:
       registry: docker.io
       repository: woodpeckerci/woodpecker-agent
-      tag: v3.6.0
+      tag: v3.12.0
   server:
     image:
       registry: docker.io
       repository: woodpeckerci/woodpecker-server
-      tag: v3.6.0
+      tag: v3.12.0
 
     env:
       WOODPECKER_GITEA: TRUE
