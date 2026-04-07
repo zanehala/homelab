@@ -38,6 +38,8 @@ gitea:
         NAME: gitea
         PASSWD: gitea
         USER: gitea
+      ui:
+        FILE_ICON_THEME: none
   persistence:
     storageClass: longhorn
     mount: true
