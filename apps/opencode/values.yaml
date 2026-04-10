@@ -1,63 +1,64 @@
-controllers:
-  main:
-    containers:
-      main:
-        image:
-          repository: ghcr.io/anomalyco/opencode
-          tag: 1.4.3
-        command:
-          - opencode
-          - serve
-          - --hostname
-          - 0.0.0.0
-          - --port
-          - "8080"
-        probes:
-          liveness:
-            enabled: true
-            type: HTTP
-            spec:
-              httpGet:
-                path: /
-                port: 8080
-          readiness:
-            enabled: true
-            type: HTTP
-            spec:
-              httpGet:
-                path: /
-                port: 8080
+app-template:
+  controllers:
+    main:
+      containers:
+        main:
+          image:
+            repository: ghcr.io/anomalyco/opencode
+            tag: 1.4.3
+          command:
+            - opencode
+            - serve
+            - --hostname
+            - 0.0.0.0
+            - --port
+            - "8080"
+          probes:
+            liveness:
+              enabled: true
+              type: HTTP
+              spec:
+                httpGet:
+                  path: /
+                  port: 8080
+            readiness:
+              enabled: true
+              type: HTTP
+              spec:
+                httpGet:
+                  path: /
+                  port: 8080
 
-service:
-  main:
-    controller: main
-    ports:
-      http:
-        port: 8080
+  service:
+    main:
+      controller: main
+      ports:
+        http:
+          port: 8080
 
-ingress:
-  main:
-    className: nginx
-    annotations:
-      cert-manager.io/cluster-issuer: letsencrypt-prod
-    hosts:
-      - host: &host opencode.zanelab.com
-        paths:
-          - path: /
-            pathType: Prefix
-            service:
-              identifier: main
-              port: http
-    tls:
-      - secretName: opencode-tls-certificate
-        hosts:
-          - *host
+  ingress:
+    main:
+      className: nginx
+      annotations:
+        cert-manager.io/cluster-issuer: letsencrypt-prod
+      hosts:
+        - host: &host opencode.zanelab.com
+          paths:
+            - path: /
+              pathType: Prefix
+              service:
+                identifier: main
+                port: http
+      tls:
+        - secretName: opencode-tls-certificate
+          hosts:
+            - *host
 
-persistence:
-  data:
-    type: persistentVolumeClaim
-    storageClass: freenas-nfs-csi
-    accessMode: ReadWriteOnce
-    size: 10Gi
-    globalMounts:
-      - path: /data
+  persistence:
+    data:
+      type: persistentVolumeClaim
+      storageClass: freenas-nfs-csi
+      accessMode: ReadWriteOnce
+      size: 10Gi
+      globalMounts:
+        - path: /home/opencode
