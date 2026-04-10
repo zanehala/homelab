@@ -57,7 +57,7 @@ app-template:
   persistence:
     data:
       type: persistentVolumeClaim
-      storageClass: freenas-nfs-csi
+      storageClass: longhorn
       accessMode: ReadWriteOnce
       size: 10Gi
       globalMounts:
