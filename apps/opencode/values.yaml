@@ -1,0 +1,61 @@
+controllers:
+  main:
+    enabled: true
+    type: deployment
+    replicas: 1
+    containers:
+      main:
+        image:
+          repository: ghcr.io/anomalyco/opencode
+          tag: 1.4.3
+          pullPolicy: IfNotPresent
+        command:
+          - opencode
+          - serve
+          - --hostname
+          - 0.0.0.0
+          - --port
+          - "8080"
+
+service:
+  main:
+    enabled: true
+    controller: main
+    primary: true
+    type: ClusterIP
+    ports:
+      http:
+        enabled: true
+        primary: true
+        port: 8080
+        protocol: HTTP
+
+ingress:
+  main:
+    enabled: true
+    className: nginx
+    annotations:
+      cert-manager.io/cluster-issuer: letsencrypt-prod
+    hosts:
+      - host: &host opencode.zanelab.com
+        paths:
+          - path: /
+            pathType: Prefix
+            service:
+              identifier: main
+              port: http
+    tls:
+      - secretName: opencode-tls-certificate
+        hosts:
+          - *host
+
+persistence:
+  data:
+    enabled: true
+    type: persistentVolumeClaim
+    storageClass: freenas-nfs-csi
+    accessMode: ReadWriteOnce
+    size: 10Gi
+    retain: true
+    globalMounts:
+      - path: /home/opencode
