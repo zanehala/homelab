@@ -7,12 +7,9 @@ app-template:
             repository: ghcr.io/anomalyco/opencode
             tag: 1.4.3
           command:
-            - opencode
-            - serve
-            - --hostname
-            - 0.0.0.0
-            - --port
-            - "8080"
+            - /bin/sh
+            - -c
+            - apk add --no-cache git && exec opencode serve --hostname 0.0.0.0 --port "8080"
           probes:
             liveness:
               enabled: true
