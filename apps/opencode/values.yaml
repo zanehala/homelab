@@ -61,4 +61,4 @@ app-template:
       accessMode: ReadWriteOnce
       size: 10Gi
       globalMounts:
-        - path: /home/opencode
+        - path: /root/.local/share
