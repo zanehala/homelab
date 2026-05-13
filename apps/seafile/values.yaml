@@ -41,5 +41,5 @@ seafile:
     image:
       registry: docker.io
       repository: bitnamilegacy/mariadb
-      tag: 10.6.8-debian-11-r9
+      tag: 11.2.3-debian-11-r9
 
