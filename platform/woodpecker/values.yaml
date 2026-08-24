@@ -4,6 +4,11 @@ woodpecker:
       registry: docker.io
       repository: woodpeckerci/woodpecker-agent
       tag: v3.6.0
+    env:
+      # v3 no longer privileges docker plugins by default; allowlist the
+      # docker-buildx plugin so DinD image builds work (unprivileged plugin
+      # steps fail with no output / exit 128 otherwise).
+      WOODPECKER_PLUGINS_PRIVILEGED: woodpeckerci/plugin-docker-buildx
   server:
     image:
       registry: docker.io
