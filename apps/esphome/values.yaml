@@ -1,7 +1,7 @@
 esphome:
   image:
     repository: esphome/esphome
-    tag: "2025.11.0"
+    tag: "2026.8.2"
   ingress:
     main:
       enabled: true
