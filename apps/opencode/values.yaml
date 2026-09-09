@@ -5,7 +5,7 @@ app-template:
         main:
           image:
             repository: ghcr.io/anomalyco/opencode
-            tag: 1.4.3
+            tag: 1.18.30
           command:
             - /bin/sh
             - -c
