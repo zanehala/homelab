@@ -4,11 +4,6 @@ woodpecker:
       registry: docker.io
       repository: woodpeckerci/woodpecker-agent
       tag: v3.6.0
-    env:
-      # v3 no longer privileges docker plugins by default; allowlist the
-      # docker-buildx plugin so DinD image builds work (unprivileged plugin
-      # steps fail with no output / exit 128 otherwise).
-      WOODPECKER_PLUGINS_PRIVILEGED: woodpeckerci/plugin-docker-buildx
   server:
     image:
       registry: docker.io
@@ -16,6 +11,10 @@ woodpecker:
       tag: v3.6.0
 
     env:
+      # v3 no longer privileges docker plugins by default; the server both
+      # lints plugin steps against this list and grants privileged mode from
+      # it, so it must be set here (not on the agent — v3 ignores it there).
+      WOODPECKER_PLUGINS_PRIVILEGED: woodpeckerci/plugin-docker-buildx
       WOODPECKER_GITEA: TRUE
       WOODPECKER_GITEA_URL: https://git.zanelab.com
       WOODPECKER_GITEA_CLIENT: 8c05ce54-ca95-4316-b351-6bfb23917397
