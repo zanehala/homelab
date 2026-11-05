@@ -1,4 +1,8 @@
 frigate:
+  image:
+    repository: ghcr.io/blakeblackshear/frigate
+    tag: "0.12.0"
+    pullPolicy: IfNotPresent
   envFromSecrets:
     - frigate-rstp-credentials
   config: |
@@ -49,8 +53,9 @@ frigate:
       size: 700Gi
   extraVolumeMounts:
   - name: data
-    mountPath: /media
-    subPath: frigate
+    # Keep recordings and the database on the existing PVC without duplicating /media.
+    mountPath: /media/frigate
+    subPath: frigate/frigate
 
   ingress:
     enabled: true

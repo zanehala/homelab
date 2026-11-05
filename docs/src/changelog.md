@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- Restore Frigate GitOps rendering by pinning chart 7.4.0 and the deployed Frigate 0.12.0 image.
+- Mount Frigate recordings and its database from the existing `frigate-data` PVC at `/media/frigate`, preserving the `frigate/frigate` directory layout and avoiding duplicate `/media` mounts.
+
 ## 0.0.6-alpha
 
 - Upgrade to Kubernetes 1.23
