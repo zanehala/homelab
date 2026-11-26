@@ -1,4 +1,7 @@
 home-assistant:
+  controller:
+    # Keep the PVC for rollback; homelab-2 now owns the Zigbee connection.
+    replicas: 0
   image:
     repository: ghcr.io/home-assistant/home-assistant
     tag: "2025.11"
